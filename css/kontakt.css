@@ -1,0 +1,224 @@
+/* Stilizimi bazë i faqes */
+body {     
+    font-family: 'Arial', sans-serif;     /* Fonti kryesor për gjithë faqen */
+    margin: 0;     /* Heq hapësirën e jashtme */
+    padding: 0;     /* Heq hapësirën e brendshme */
+    background-color: #f5f5f5;     /* Ngjyrë gri shumë e lehtë për sfondin */
+    color: #000000;     /* Ngjyra e zezë për tekstin */
+} 
+
+/* Kontejneri kryesor që mban gjithë përmbajtjen */
+.container {     
+    max-width: 1200px;     /* Gjerësia maksimale */
+    margin: 0 auto;     /* Qendërzimi horizontal */
+    padding: 20px;     /* Hapësira e brendshme */
+    display: flex;     /* Përdorim layout flex */
+    flex-wrap: wrap;     /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    justify-content: space-between;     /* Shpërndarja e hapësirës ndërmjet elementëve */
+} 
+
+/* Stilizimi i kokës së faqes */
+.header {     
+    background-color: #9C2D2F;     /* Ngjyra e kuqe e sfondit */
+    color: white;     /* Ngjyra e bardhë e tekstit */
+    padding: 15px 0;     /* Hapësira e brendshme vetëm lart/poshtë */
+    width: 100%;     /* Gjerësia e plotë */
+    text-align: center;     /* Qendërzimi i tekstit */
+    margin-bottom: 30px;     /* Hapësira poshtë */
+} 
+
+/* Zona e informacionit të kontaktit */
+.contact-info {     
+    flex: 1;     /* Zë hapësirën në mënyrë të barabartë */
+    margin-right: 40px;     /* Hapësira djathtas */
+    min-width: 300px;     /* Gjerësia minimale */
+} 
+
+/* Kontejneri i formularit të kontaktit */
+.contact-form-container {     
+    flex: 1;     /* Zë hapësirën në mënyrë të barabartë */
+    min-width: 300px;     /* Gjerësia minimale */
+    background-color: #ffffff;     /* Sfond i bardhë */
+    padding: 30px;     /* Hapësira e brendshme */
+    border-radius: 10px;     /* Këndet e rrumbullakosura */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);     /* Hije e lehtë */
+} 
+
+/* Stili i titullit kryesor */
+h1 {     
+    font-size: 2.5rem;     /* Madhësia e fontit */
+    margin-bottom: 20px;     /* Hapësira poshtë */
+    color: #000000;     /* Ngjyra e zezë */
+} 
+
+/* Stili i paragrafëve */
+p {     
+    font-size: 1rem;     /* Madhësia e fontit */
+    line-height: 1.6;     /* Lartësia e rreshtit */
+    margin-bottom: 20px;     /* Hapësira poshtë */
+} 
+
+/* Stili i elementëve të informacionit të kontaktit */
+.contact-item {     
+    display: flex;     /* Përdorim layout flex */
+    align-items: center;     /* Qendërzim vertikal */
+    margin-bottom: 15px;     /* Hapësira poshtë */
+} 
+
+/* Stili i ikonave në informacionin e kontaktit */
+.icon {     
+    color: #9C2D2F;     /* Ngjyra e kuqe */
+    margin-right: 10px;     /* Hapësira djathtas */
+    font-size: 1.2rem;     /* Madhësia e fontit */
+} 
+
+/* Stili i grupeve të fushave në formular */
+.form-group {     
+    margin-bottom: 20px;     /* Hapësira poshtë */
+} 
+
+/* Stili i etiketave në formular */
+label {     
+    display: block;     /* Shfaqet si bllok */
+    margin-bottom: 5px;     /* Hapësira poshtë */
+    font-weight: bold;     /* Trashësia e fontit */
+    color: #000000;     /* Ngjyra e zezë */
+} 
+
+/* Stili i fushave të tekstit dhe zonave të tekstit */
+input, textarea {     
+    width: 100%;     /* Gjerësia e plotë */
+    padding: 10px;     /* Hapësira e brendshme */
+    border: 1px solid #ccc;     /* Kufi i hollë gri */
+    border-radius: 4px;     /* Këndet e rrumbullakosura */
+    font-size: 1rem;     /* Madhësia e fontit */
+} 
+
+/* Stili i fushave kur janë në fokus */
+input:focus, textarea:focus {     
+    outline: none;     /* Heq konturin e parazgjedhur */
+    border-color: #9C2D2F;     /* Kufi i kuq */
+    box-shadow: 0 0 0 2px rgba(230, 57, 70, 0.2);     /* Hije e lehtë me ngjyrë */
+} 
+
+/* Stili i fushave me gabim */
+input.error, textarea.error {     
+    border-color: #9C2D2F;     /* Kufi i kuq */
+} 
+
+/* Stili i mesazhit të gabimit nën fushat */
+.error-message {     
+    color: #9C2D2F;     /* Ngjyra e kuqe */
+    font-size: 0.85rem;     /* Madhësia e fontit */
+    margin-top: 5px;     /* Hapësira sipër */
+} 
+
+/* Kontejneri i emrave në formular (emër + mbiemër) */
+.name-fields {     
+    display: flex;     /* Përdorim layout flex */
+    gap: 15px;     /* Hapësira ndërmjet fushave */
+} 
+
+/* Stili i fushave të emrave */
+.name-fields input {     
+    flex: 1;     /* Zënë hapësirë të barabartë */
+} 
+
+/* Stili i butonit të dërgimit */
+button {     
+    background-color: #800f2f;     /* Ngjyrë e kuqe e thellë */
+    color: white;     /* Teksti i bardhë */
+    border: none;     /* Pa kufi */
+    padding: 12px 30px;     /* Hapësira e brendshme */
+    border-radius: 30px;     /* Këndet shumë të rrumbullakosura */
+    cursor: pointer;     /* Kursori shfaqet si dorë */
+    font-size: 1rem;     /* Madhësia e fontit */
+    font-weight: bold;     /* Trashësia e fontit */
+    transition: background-color 0.3s;     /* Animacion i ndryshimit të ngjyrës */
+} 
+
+/* Efekti kur kursori kalon mbi buton */
+button:hover {     
+    background-color: #ff4d6d;     /* Ngjyrë rozë-e kuqe */
+} 
+
+/* Stili i zonës së tekstit (për mesazhin) */
+textarea {     
+    height: 150px;     /* Lartësia fikse */
+} 
+
+/* Stili i titullit të formularit */
+.form-title {     
+    text-align: center;     /* Qendërzimi i tekstit */
+    margin-bottom: 25px;     /* Hapësira poshtë */
+    font-size: 1.5rem;     /* Madhësia e fontit */
+    color: #9C2D2F;     /* Ngjyra e kuqe */
+} 
+
+/* Stili i mesazhit të suksesit pas dërgimit të formularit */
+.success-message {     
+    background-color: #d4edda;     /* Sfond i gjelbër i lehtë */
+    color: #155724;     /* Tekst i gjelbër i errët */
+    border: 1px solid #c3e6cb;     /* Kufi i hollë i gjelbër */
+    border-radius: 4px;     /* Këndet e rrumbullakosura */
+    padding: 12px 20px;     /* Hapësira e brendshme */
+    margin-bottom: 20px;     /* Hapësira poshtë */
+    text-align: center;     /* Qendërzimi i tekstit */
+    font-weight: bold;     /* Trashësia e fontit */
+}  
+
+/* Stili i mesazhit të gabimit global pas dërgimit të formularit */
+.error-message-global {     
+    background-color: #f8d7da;     /* Sfond i kuq i lehtë */
+    color: #721c24;     /* Tekst i kuq i errët */
+    border: 1px solid #f5c6cb;     /* Kufi i hollë i kuq */
+    border-radius: 4px;     /* Këndet e rrumbullakosura */
+    padding: 12px 20px;     /* Hapësira e brendshme */
+    margin-bottom: 20px;     /* Hapësira poshtë */
+    text-align: center;     /* Qendërzimi i tekstit */
+    font-weight: bold;     /* Trashësia e fontit */
+}  
+
+/* Stilizimi i fushave me gabim (përsëritje e stilit të mëparshëm me ndryshime) */
+input.error, textarea.error {     
+    border-color: #dc3545;     /* Kufi i kuq */
+    background-color: #fff8f8;     /* Sfond i kuq shumë i lehtë */
+}  
+
+/* Stili i mesazhit të gabimit nën fusha (përsëritje e stilit të mëparshëm me ndryshime) */
+.error-message {     
+    color: #dc3545;     /* Ngjyrë e kuqe */
+    font-size: 0.85rem;     /* Madhësia e fontit */
+    margin-top: 5px;     /* Hapësira sipër */
+    margin-bottom: 10px;     /* Hapësira poshtë */
+}  
+
+/* Stili i butonit kur është i çaktivizuar (gjatë dërgimit të formës) */
+button[type="submit"]:disabled {     
+    background-color: #cccccc;     /* Ngjyrë gri */
+    cursor: not-allowed;     /* Kursori tregon që veprimi nuk lejohet */
+}  
+
+/* Efekti i animacionit për mesazhet e suksesit dhe gabimit */
+.success-message, .error-message-global {     
+    animation: fadeIn 0.5s;     /* Animacion i shfaqjes */
+}  
+
+/* Përcaktimi i animacionit të shfaqjes */
+@keyframes fadeIn {     
+    from { opacity: 0; transform: translateY(-10px); }     /* Fillon transparent dhe 10px lart */
+    to { opacity: 1; transform: translateY(0); }     /* Përfundon plotësisht i dukshëm në pozicionin e duhur */
+} 
+
+/* Përshtatjet për pajisjet mobile */
+@media (max-width: 768px) {     
+    /* Ndryshimi i drejtimit të kontejnerit kryesor për ekrane të vogla */
+    .container {         
+        flex-direction: column;     /* Elementët shfaqen vertikalisht */
+    }     
+    /* Rregullimi i hapësirave për ekrane të vogla */
+    .contact-info, .contact-form-container {         
+        margin-right: 0;     /* Heq hapësirën djathtas */
+        margin-bottom: 30px;     /* Shton hapësirë poshtë */
+    } 
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lidhja me CSS-të e nevojshme dhe Font Awesome për ikonat -->
+  <title>Galeria - Kori Mrekullia</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/galeria.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigimi i faqes me menunë kryesore dhe nënmenutë dropdown -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="../asete/foto/logo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+      <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+      <li class="dropdown">
+        <a>Aktivitete</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/koncerte.html">Koncertet</a></li>
+          <li><a href="/pages/kalendari.html">Kalendari</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+      <li><a href="/pages/galeria.html" class="active">Galeria</a></li>
+      <li><a href="/pages/suport.html">Suport</a></li>
+      <li class="dropdown">
+        <a>Informacione</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Titulli dhe përshkrimi i faqes -->
+  <section class="page-header">
+    <h1>Galeria</h1>
+    <p>Shikoni momentet m&euml; t&euml; bukura t&euml; Korit Mrekullia</p>
+  </section>
+
+  <!-- Butonat e filtrimit për shfaqjen e përmbajtjes specifike -->
+  <div class="gallery-filter">
+    <button class="filter-btn active" data-filter="all">T&euml; Gjitha</button>
+    <button class="filter-btn" data-filter="foto">Foto</button>
+    <button class="filter-btn" data-filter="video">Video</button>
+  </div>
+
+  <!-- Kontejneri kryesor i galerisë me elementët e fotove dhe videove -->
+  <section class="gallery-container">
+    <!-- Elementët e fotove me përshkrimet dhe butonin e shikimit -->
+    <div class="gallery-item foto">
+      <img src="/asete/foto/index1.png" alt="Kori Mrekullia në koncert">
+      <div class="item-overlay">
+        <h3>Koncert Festat e N&euml;ntorit</h3>
+        <p>N&euml;ntor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/prova.jpg" alt="Prova e Korit">
+      <div class="item-overlay">
+        <h3>Prova e p&euml;rjavshme</h3>
+        <p>Qershor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeriekskursion.jpg" alt="Ekskursion me Korin">
+      <div class="item-overlay">
+        <h3>Ekskursion n&euml; Oh&euml;r</h3>
+        <p>Maj 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeriFundvit.jpg" alt="Fundviti me Korin">
+      <div class="item-overlay">
+        <h3>Kori gjat&euml; provave t&euml; koncertit t&euml; Fundvitit</h3>
+        <p>Dhjetor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/koncertRecitalThumbnail.png" alt="Festival muzikor">
+      <div class="item-overlay">
+        <h3>Performanc&euml; n&euml; Top-Channel</h3>
+        <p>Korrik 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/behu-pjese.jpg" alt="Festivali i Këngës">
+      <div class="item-overlay">
+        <h3>Festival Nd&euml;rkomb&euml;tar</h3>
+        <p>Gusht 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/prova3.jpg" alt="Mësimi i notave">
+      <div class="item-overlay">
+        <h3>M&euml;simi i notave</h3>
+        <p>Shtator 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/shfaqje-tv.jpg" alt="Shfaqje televizive">
+      <div class="item-overlay">
+        <h3>Shfaqje televizive</h3>
+        <p>Maj 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeriPasSkene.jpg" alt="Shfaqje televizive">
+      <div class="item-overlay">
+        <h3>Prapa kunitave televizive</h3>
+        <p>Prill 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/fundvit.jpg" alt="Koncerti i fundvit">
+      <div class="item-overlay">
+        <h3>Koncerti i Fundvitit</h3>
+        <p>Dhjetor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/prova2.jpg" alt="Prapa skenave">
+      <div class="item-overlay">
+        <h3>Prapa skenave me ne</h3>
+        <p>N&euml;ntor 2023</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeriKryeministria.jpg" alt="Koncerti në Tiranë">
+      <div class="item-overlay">
+        <h3>Koncerti n&euml; Tiran&euml;</h3>
+        <p>Qershor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeri%20backstage.jpg" alt="Grupi i Korit pas koncertit">
+      <div class="item-overlay">
+        <h3>Grupi i Korit pas koncertit</h3>
+        <p>Dhjetor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeri3.jpg" alt="Grupi i Korit pas koncertit">
+      <div class="item-overlay">
+        <h3>Kori gjat&euml; koncertit Pranveror</h3>
+        <p>Prill 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galerigrupi.jpg" alt="Grupi i Korit pas koncertit">
+      <div class="item-overlay">
+        <h3>Nj&euml; foto s&euml; bashku</h3>
+        <p>Dhjetor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    <div class="gallery-item foto">
+      <img src="/asete/foto/galeriPiramida.jpg" alt="Grupi i Korit te Piramida">
+      <div class="item-overlay">
+        <h3>Grupi i Korit te Piramida</h3>
+        <p>Qershor 2024</p>
+        <button class="view-btn"><i class="fas fa-search-plus"></i> Shiko</button>
+      </div>
+    </div>
+    
+    <!-- Elementët e videove me thumbnail dhe butonin e shikimit/dëgjimit -->
+    <div class="gallery-item video">
+      <div class="video-thumbnail">
+        <img src="/asete/foto/kengeMesuesitthumb.png" alt="Thumbnail për Këngën e Mësuesit">
+        <div class="play-icon">
+          <i class="fas fa-play"></i>
+        </div>
+        <!-- Burimi i videos i fshehur për modalin -->
+        <span class="video-source" style="display:none;">/asete/video/kengeMesuesit.mp4</span>
+      </div>
+      <div class="item-overlay">
+        <h3>K&euml;nga e M&euml;suesit</h3>
+        <p>Tv Klan</p>
+        <button class="view-btn"><i class="fas fa-play"></i> Shiko</button>
+      </div>
+    </div>
+    
+    <div class="gallery-item video">
+      <div class="video-thumbnail">
+        <img src="/asete/foto/kengepranveresthumb.png" alt="Thumbnail për Këngën e Pranverës">
+        <div class="play-icon">
+          <i class="fas fa-play"></i>
+        </div>
+        <!-- Burimi i videos i fshehur për modalin -->
+        <span class="video-source" style="display:none;">/asete/video/kengePranveres.mp4</span>
+      </div>
+      <div class="item-overlay">
+        <h3>K&euml;nga e Pranver&euml;s</h3>
+        <p>Abc News</p>
+        <button class="view-btn"><i class="fas fa-play"></i> Shiko</button>
+      </div>
+    </div>
+    
+    <div class="gallery-item video">
+      <div class="video-thumbnail">
+        <img src="/asete/foto/kolazhPatriotikthumb.png" alt="Thumbnail për Kolazhin Patriotik">
+        <div class="play-icon">
+          <i class="fas fa-play"></i>
+        </div>
+        <!-- Burimi i videos i fshehur për modalin -->
+        <span class="video-source" style="display:none;">/asete/video/kolazhPatriotik.mp4</span>
+      </div>
+      <div class="item-overlay">
+        <h3>Kolazh Patriotik</h3>
+        <p>Top Channel</p>
+        <button class="view-btn"><i class="fas fa-play"></i> Shiko</button>
+      </div>
+    </div>
+    
+    <!-- Dy elemente të tjera video me informacion dhe burim video -->
+    <div class="gallery-item video">
+      <div class="video-thumbnail">
+        <img src="/asete/foto/koncertpranveror_thumbnail.png" alt="Thumbnail për Koncert Pranveror">
+        <div class="play-icon">
+          <i class="fas fa-play"></i>
+        </div>
+        <!-- Burimi i videos i fshehur për modalin -->
+        <span class="video-source" style="display:none;">/asete/video/koncertpranveror.mp4</span>
+      </div>
+      <div class="item-overlay">
+        <h3>Koncert Pranveror</h3>
+        <p>Qershor 2023</p>
+        <button class="view-btn"><i class="fas fa-play"></i> Shiko</button>
+      </div>
+    </div>
+    
+    <div class="gallery-item video">
+      <div class="video-thumbnail">
+        <img src="/asete/foto/koncertanglisht_thumbnail.png" alt="Thumbnail për Këngën Anglisht">
+        <div class="play-icon">
+          <i class="fas fa-play"></i>
+        </div>
+        <!-- Burimi i videos i fshehur për modalin -->
+        <span class="video-source" style="display:none;">/asete/video/koncertanglisht.mp4</span>
+      </div>
+      <div class="item-overlay">
+        <h3>Nj&euml; cop&euml;z kenge n&euml; anglisht</h3>
+        <p>Prill 2024</p>
+        <button class="view-btn"><i class="fas fa-play"></i> Shiko</button>
+      </div>
+    </div>
+  </section>
+      
+  <!-- Dritarja modale për shikimin e detajuar të fotove dhe videove -->
+  <div class="modal" id="galleryModal">
+    <span class="close-modal">&times;</span>
+    <div class="modal-content">
+      <div class="modal-media">
+        <!-- Këtu do shfaqet foto ose video e zgjedhur -->
+      </div>
+      <div class="modal-info">
+        <h3 class="modal-title">Titulli</h3>
+        <p class="modal-description"></p>
+      </div>
+      <div class="modal-nav">
+        <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Skriptat JavaScript për funksionalitetin e faqes dhe galerisë -->
+  <script src="../js/index.js"></script>
+  <script src="../js/galeria.js"></script>
+</body>
+</html>

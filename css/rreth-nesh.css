@@ -1,0 +1,390 @@
+/* Stilizimi për faqen Rreth Nesh - Kodi për faqen e informacionit për korin */
+
+/* Header specifik për faqen Rreth Nesh - Zona kryesore në krye të faqes */
+.about-header {
+    text-align: center; /* Qendërzimi i tekstit */
+    padding: 60px 20px; /* Hapësira e brendshme: 60px lart/poshtë, 20px majtas/djathtas */
+    background-color: #f9f9f9; /* Ngjyrë gri shumë e lehtë për sfondin */
+    border-bottom: 3px solid #9C2D2F; /* Vijë e kuqe në fund */
+}
+
+/* Stili i titullit kryesor në header */
+.about-header h1 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-size: 2.5rem; /* Madhësia e fontit */
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në header */
+.about-header p {
+    font-size: 1.2rem; /* Madhësia e fontit */
+    color: #444; /* Ngjyrë gri e errët */
+    max-width: 700px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Container për strukturimin e përmbajtjes - Kontejneri kryesor që mban gjithë përmbajtjen */
+.container {
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+    padding: 0 20px; /* Hapësira e brendshme vetëm anash */
+}
+
+/* Stilizimi i seksionit të përmbajtjes kryesore - Zona me gjithë informacionin */
+.about-content {
+    background-color: #fff; /* Sfond i bardhë */
+    padding: 50px 0; /* Hapësira e brendshme vetëm lart/poshtë */
+}
+
+/* Stilizimi i hyrjes - Zona me informacionin hyrës */
+.about-intro {
+    text-align: center; /* Qendërzimi i tekstit */
+    margin-bottom: 50px; /* Hapësira poshtë */
+    max-width: 800px; /* Gjerësia maksimale */
+    margin-left: auto; /* Qendërzimi horizontal */
+    margin-right: auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i titullit në hyrje */
+.about-intro h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    font-size: 2rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafëve në hyrje */
+.about-intro p {
+    font-size: 1.1rem; /* Madhësia e fontit */
+    line-height: 1.7; /* Lartësia e rreshtit */
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stilizimi i seksionit Vizion-Mision - Zona me vizionin dhe misionin e korit */
+.about-vision-mission {
+    display: flex; /* Përdorim layout flex */
+    justify-content: space-between; /* Elementët shpërndahen në hapësirën e disponueshme */
+    margin-bottom: 60px; /* Hapësira poshtë */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    gap: 30px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i përbashkët për vizionin dhe misionin */
+.vision, .mission {
+    flex: 1; /* Zënë hapësirë të barabartë */
+    min-width: 300px; /* Gjerësia minimale */
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    padding: 30px; /* Hapësira e brendshme */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    text-align: center; /* Qendërzimi i tekstit */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+}
+
+/* Stili i titujve në vizion dhe mision */
+.vision h3, .mission h3 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin: 15px 0; /* Hapësira lart/poshtë */
+    font-size: 1.5rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafëve në vizion dhe mision */
+.vision p, .mission p {
+    font-size: 1rem; /* Madhësia e fontit */
+    line-height: 1.6; /* Lartësia e rreshtit */
+}
+
+/* Stili i ikonave në vizion dhe mision */
+.icon {
+    font-size: 2rem; /* Madhësia e fontit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stilizimi i seksionit të vlerave - Zona që prezanton vlerat e korit */
+.about-values {
+    text-align: center; /* Qendërzimi i tekstit */
+    margin-bottom: 60px; /* Hapësira poshtë */
+}
+
+/* Stili i titullit në seksionin e vlerave */
+.about-values h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 30px; /* Hapësira poshtë */
+    font-size: 2rem; /* Madhësia e fontit */
+}
+
+/* Struktura grid për vlerat */
+.values-grid {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolona që përshtaten automatikisht */
+    gap: 25px; /* Hapësira ndërmjet elementëve */
+    margin-top: 30px; /* Hapësira sipër */
+}
+
+/* Stili i secilës kartë vlere */
+.value-item {
+    background-color: #f9f9f9; /* Ngjyrë gri shumë e lehtë */
+    padding: 25px; /* Hapësira e brendshme */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08); /* Hije e lehtë */
+    transition: transform 0.3s ease; /* Animacion i transformimit */
+}
+
+/* Efekti kur kursori kalon mbi kartën e vlerës */
+.value-item:hover {
+    transform: translateY(-5px); /* Ngritje e lehtë lart */
+}
+
+/* Stili i titullit në kartën e vlerës */
+.value-item h3 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin: 15px 0; /* Hapësira lart/poshtë */
+    font-size: 1.2rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit në kartën e vlerës */
+.value-item p {
+    font-size: 0.95rem; /* Madhësia e fontit */
+    line-height: 1.5; /* Lartësia e rreshtit */
+}
+
+/* Stilizimi i repertorit - Zona që prezanton repertorin e korit */
+.about-repertory {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    padding: 40px; /* Hapësira e brendshme */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    margin-bottom: 60px; /* Hapësira poshtë */
+}
+
+/* Stili i titullit në seksionin e repertorit */
+.about-repertory h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    font-size: 1.8rem; /* Madhësia e fontit */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i paragrafëve në seksionin e repertorit */
+.about-repertory p {
+    font-size: 1.1rem; /* Madhësia e fontit */
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stili i listës në seksionin e repertorit */
+.about-repertory ul {
+    list-style-type: none; /* Pa pika liste */
+    padding-left: 20px; /* Hapësira e brendshme majtas */
+}
+
+/* Stili i elementëve të listës në seksionin e repertorit */
+.about-repertory ul li {
+    position: relative; /* Pozicionim relativ për ikonën */
+    padding-left: 30px; /* Hapësira e brendshme majtas */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    font-size: 1rem; /* Madhësia e fontit */
+    line-height: 1.5; /* Lartësia e rreshtit */
+}
+
+/* Ikona e notës muzikore përpara çdo elementi të listës */
+.about-repertory ul li:before {
+    content: "♪"; /* Përmbajtja e ikonës - nota muzikore */
+    position: absolute; /* Pozicionim absolut */
+    left: 0; /* Pozicionim nga e majta */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-size: 1.2rem; /* Madhësia e fontit */
+}
+
+/* Stilizimi i aktiviteteve - Zona me informacionin për aktivitetet */
+.about-activities {
+    margin-bottom: 60px; /* Hapësira poshtë */
+}
+
+/* Stili i titullit në seksionin e aktiviteteve */
+.about-activities h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    text-align: center; /* Qendërzimi i tekstit */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    font-size: 1.8rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit kryesor në seksionin e aktiviteteve */
+.about-activities > p {
+    text-align: center; /* Qendërzimi i tekstit */
+    margin-bottom: 30px; /* Hapësira poshtë */
+    font-size: 1.1rem; /* Madhësia e fontit */
+}
+
+/* Struktura grid për aktivitetet */
+.activities-grid {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Kolona që përshtaten automatikisht */
+    gap: 30px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i secilës kartë aktiviteti */
+.activity-item {
+    background-color: #fff; /* Sfond i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+    transition: transform 0.3s ease; /* Animacion i transformimit */
+}
+
+/* Efekti kur kursori kalon mbi kartën e aktivitetit */
+.activity-item:hover {
+    transform: translateY(-5px); /* Ngritje e lehtë lart */
+}
+
+/* Stili i imazhit në kartën e aktivitetit */
+.activity-item img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 200px; /* Lartësia fikse */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+    display: block; /* Shfaqet si bllok */
+}
+
+/* Stili i titullit në kartën e aktivitetit */
+.activity-item h3 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    padding: 15px 15px 10px; /* Hapësira e brendshme: 15px lart/djathtas/majtas, 10px poshtë */
+    font-size: 1.2rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit në kartën e aktivitetit */
+.activity-item p {
+    padding: 0 15px 20px; /* Hapësira e brendshme: 0 lart, 15px majtas/djathtas, 20px poshtë */
+    font-size: 0.95rem; /* Madhësia e fontit */
+}
+
+/* Stilizimi i seksionit "Pse të bëhesh pjesë" - Zona që promovon anëtarësimin */
+.about-join {
+    background-color: #f9f9f9; /* Ngjyrë gri shumë e lehtë */
+    padding: 40px; /* Hapësira e brendshme */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    margin-bottom: 40px; /* Hapësira poshtë */
+}
+
+/* Stili i titullit në seksionin e anëtarësimit */
+.about-join h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    font-size: 1.8rem; /* Madhësia e fontit */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i paragrafëve në seksionin e anëtarësimit */
+.about-join p {
+    font-size: 1.1rem; /* Madhësia e fontit */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i listës në seksionin e anëtarësimit */
+.about-join ul {
+    list-style-type: none; /* Pa pika liste */
+    padding-left: 20px; /* Hapësira e brendshme majtas */
+    margin-bottom: 30px; /* Hapësira poshtë */
+}
+
+/* Stili i elementëve të listës në seksionin e anëtarësimit */
+.about-join ul li {
+    position: relative; /* Pozicionim relativ për ikonën */
+    padding-left: 30px; /* Hapësira e brendshme majtas */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    font-size: 1rem; /* Madhësia e fontit */
+    line-height: 1.5; /* Lartësia e rreshtit */
+}
+
+/* Ikona e shenjës (check) përpara çdo elementi të listës */
+.about-join ul li:before {
+    content: "✓"; /* Përmbajtja e ikonës - shenja e konfirmimit */
+    position: absolute; /* Pozicionim absolut */
+    left: 0; /* Pozicionim nga e majta */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-weight: bold; /* Trashësia e fontit */
+}
+
+/* Zona e thirrjes për veprim */
+.join-cta {
+    text-align: center; /* Qendërzimi i tekstit */
+    margin-top: 30px; /* Hapësira sipër */
+}
+
+/* Stili i butonit të thirrjes për veprim */
+.cta-btn {
+    display: inline-block; /* Shfaqet si bllok në linjë */
+    padding: 15px 30px; /* Hapësira e brendshme */
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    text-decoration: none; /* Pa nënvizim */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    font-size: 1.1rem; /* Madhësia e fontit */
+    font-weight: bold; /* Trashësia e fontit */
+    transition: background-color 0.3s ease; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin */
+.cta-btn:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* Responsivitet për rezolucion tablet - Përshtatjet për ekranet e mesme */
+@media (max-width: 1024px) {
+    /* Ndryshimi i drejtimit të vizionit dhe misionit */
+    .about-vision-mission {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+    
+    /* Përshtatja e gjerësisë së vizionit dhe misionit */
+    .vision, .mission {
+        width: 100%; /* Gjerësia e plotë */
+        margin-bottom: 20px; /* Hapësira poshtë */
+    }
+    
+    /* Zvogëlimi i numrit të kolonave në grid-in e vlerave */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr); /* Vetëm 2 kolona */
+    }
+    
+    /* Zvogëlimi i numrit të kolonave në grid-in e aktiviteteve */
+    .activities-grid {
+        grid-template-columns: repeat(2, 1fr); /* Vetëm 2 kolona */
+    }
+}
+
+/* Responsivitet për rezolucion mobile - Përshtatjet për ekranet e vogla */
+@media (max-width: 768px) {
+    /* Zvogëlimi i hapësirës në header */
+    .about-header {
+        padding: 40px 20px; /* Hapësira e brendshme zvogëluar */
+    }
+    
+    /* Zvogëlimi i madhësisë së titullit në header */
+    .about-header h1 {
+        font-size: 2rem; /* Madhësia e fontit zvogëluar */
+    }
+    
+    /* Zvogëlimi i madhësisë së titullit në hyrje */
+    .about-intro h2 {
+        font-size: 1.8rem; /* Madhësia e fontit zvogëluar */
+    }
+    
+    /* Ndryshimi i strukturës së grid-it të vlerave për një kolonë */
+    .values-grid {
+        grid-template-columns: 1fr; /* Vetëm 1 kolonë */
+    }
+    
+    /* Ndryshimi i strukturës së grid-it të aktiviteteve për një kolonë */
+    .activities-grid {
+        grid-template-columns: 1fr; /* Vetëm 1 kolonë */
+    }
+    
+    /* Zvogëlimi i hapësirës në seksionet e repertorit dhe anëtarësimit */
+    .about-repertory, .about-join {
+        padding: 30px 20px; /* Hapësira e brendshme zvogëluar */
+    }
+    
+    /* Zvogëlimi i hapësirës në vizion dhe mision */
+    .vision, .mission {
+        padding: 20px; /* Hapësira e brendshme zvogëluar */
+    }
+}

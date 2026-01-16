@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lidhja me CSS-të e nevojshme dhe ikonat e Font Awesome -->
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/blog.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Kori i F&euml;mij&euml;ve "Mrekullia" - Blog</title>
+</head>
+<body>
+    <!-- Navigimi i faqes me menu dropdown dhe linqet kryesore -->
+    <nav class="navbar">
+        <div class="logo">
+          <img src="../asete/foto/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+          <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+          <li class="dropdown">
+            <a>Aktivitete</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/koncerte.html">Koncertet</a></li>
+              <li><a href="/pages/kalendari.html">Kalendari</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+          <li><a href="/pages/galeria.html" class="active">Galeria</a></li>
+          <li><a href="/pages/suport.html">Suport</a></li>
+          <li class="dropdown">
+            <a>Informacione</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav> 
+
+    <!-- Titulli kryesor i faqes -->
+    <header>
+        <h1>Blog & Njoftime</h1>
+    </header>
+    
+    <div class="container">
+        <!-- Struktura kryesore e blog-ut me seksionin e postimeve dhe sidebar-in -->
+        <div class="blog-container">
+            <main class="blog-main">
+                <!-- Kutia e kerkimit per postimet -->
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="K&euml;rko n&euml; blog...">
+                    <button id="search-button">K&euml;rko</button>
+                </div>
+                
+                <!-- Zona ku do te shfaqen postimet -->
+                <div class="posts" id="posts-container">
+                    <!-- Postimet do te ngarkohen ketu nga JavaScript -->
+                </div>
+                
+                <!-- Zona e paginimit -->
+                <div class="pagination" id="pagination">
+                    <!-- Linqet e paginimit do te gjenerohen nga JavaScript -->
+                </div>
+            </main>
+            
+            <!-- Sidebar me filtrat e blog-ut -->
+            <aside class="blog-sidebar">
+                <div class="filters">
+                    <h3>Filtro</h3>
+                    <label class="filter-option">
+                        <input type="radio" name="filter" value="newest" checked> Postimet m&euml; t&euml; fundit
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="filter" value="oldest"> Postimet m&euml; t&euml; vjetra
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="filter" value="announcements"> Njoftime
+                    </label>
+                </div>
+            </aside>
+        </div>
+        
+        <!-- Seksionet e poshtme: postimet popullore dhe formulari i abonimit -->
+        <div class="bottom-sections">
+            <!-- Zona e postimeve me te lexuara -->
+            <div class="popular-posts">
+                <h3 class="section-title">Postimet m&euml; t&euml; lexuara</h3>
+                <div id="popular-posts-container">
+                    <!-- Postimet popullore do te ngarkohen ketu nga JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Zona e abonimit per njoftime te reja -->
+            <div class="subscribe">
+                <h3 class="section-title">Abonohu p&euml;r njoftime</h3>
+                <p>Regjistrohuni p&euml;r t&euml; marr&euml; njoftime p&euml;r postimet m&euml; t&euml; reja.</p>
+                <form id="subscribe-form">
+                    <input type="email" id="email-input" placeholder="Adresa juaj e emailit" required>
+                    <button type="submit">Abonohu</button>
+                </form>
+                <div class="success-message" id="success-message">
+                    Faleminderit p&euml;r abonimin! Do t&euml; njoftoheni p&euml;r koncertet, aktivitetet dhe eventet tona m&euml; t&euml; fundit.
+                </div>
+                <div class="error-message" id="error-message">
+                    Ju lutem vendosni nj&euml; adres&euml; emaili t&euml; vlefshme.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dritarja modale per shfaqjen e postimeve te plota -->
+    <div class="modal" id="post-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal">&times;</span>
+            <h2 class="modal-title" id="modal-title">Titulli i postimit</h2>
+            <p class="modal-date" id="modal-date"></p>
+            <img class="modal-img" id="modal-img" src="../asete/foto/logo.png" alt="Imazh">
+            <div id="modal-content"></div>
+        </div>
+    </div>
+    
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+
+      <!-- Lidhja me skriptat JavaScript per funksionalitetin e faqes -->
+      <script src="../js/index.js"></script>
+      <script src="../js/blog.js"></script>
+    
+    
+</body>
+</html>

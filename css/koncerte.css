@@ -1,0 +1,494 @@
+/* STILI PËR FAQEN E KONCERTEVE - Kodi për faqen e informacionit të koncerteve */
+
+/* HEADER I FAQES - Zona kryesore në krye të faqes */
+.page-header {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Ngjyra e bardhë e tekstit */
+    text-align: center; /* Qendërzimi i tekstit */
+    padding: 40px 20px; /* Hapësira e brendshme: 40px lart/poshtë, 20px majtas/djathtas */
+}
+
+/* Stili i titullit kryesor në header */
+.page-header h1 {
+    font-size: 2.2rem; /* Madhësia e fontit */
+    margin-bottom: 10px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në header */
+.page-header p {
+    font-size: 1rem; /* Madhësia e fontit */
+    max-width: 800px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* SEKSIONI I VIDEOS - Zona ku shfaqet videoja kryesore */
+.video-container {
+    background-color: #f8f8f8; /* Ngjyrë gri shumë e lehtë */
+    padding: 50px 20px; /* Hapësira e brendshme */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Mbështjellësi i videos */
+.video-wrapper {
+    max-width: 800px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+    background-color: white; /* Sfond i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+}
+
+/* Videoja e koncertit */
+#koncert-video {
+    width: 100%; /* Gjerësia e plotë */
+    display: block; /* Shfaqet si bllok */
+    height: auto; /* Lartësia përshtatet automatikisht */
+    border-radius: 10px 10px 0 0; /* Këndet e rrumbullakosura vetëm sipër */
+}
+
+/* Shënimi nën video */
+.video-caption {
+    padding: 20px; /* Hapësira e brendshme */
+    background-color: white; /* Sfond i bardhë */
+    text-align: left; /* Tekst i rreshtuar majtas */
+}
+
+/* Stili i titullit në shënimin e videos */
+.video-caption h3 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 5px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në shënimin e videos */
+.video-caption p {
+    color: #666; /* Ngjyrë gri */
+    font-size: 0.9rem; /* Madhësia e fontit */
+}
+
+/* TIMELINE I EVENTEVE - Zona e historisë së koncerteve */
+.events-timeline {
+    padding: 60px 20px; /* Hapësira e brendshme */
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i titullit në timeline */
+.events-timeline h2 {
+    text-align: center; /* Qendërzimi i tekstit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 40px; /* Hapësira poshtë */
+    font-size: 1.8rem; /* Madhësia e fontit */
+}
+
+/* Stili i kartës së eventit në timeline */
+.event-card {
+    display: flex; /* Përdorim layout flex */
+    flex-direction: column; /* Elementët shfaqen vertikalisht */
+    background-color: white; /* Sfond i bardhë */
+    margin-bottom: 30px; /* Hapësira poshtë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+}
+
+/* Zona e datës së eventit */
+.event-date {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    padding: 15px; /* Hapësira e brendshme */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-weight: 600; /* Trashësia e fontit */
+    display: flex; /* Përdorim layout flex */
+    align-items: center; /* Qendërzim vertikal */
+    gap: 10px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i ikonës së datës */
+.date-icon {
+    font-size: 1.2rem; /* Madhësia e fontit */
+}
+
+/* Përmbajtja e eventit */
+.event-content {
+    padding: 20px; /* Hapësira e brendshme */
+}
+
+/* Stili i titullit të eventit */
+.event-content h3 {
+    color: #333; /* Ngjyrë gri e errët */
+    margin-bottom: 10px; /* Hapësira poshtë */
+    font-size: 1.4rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit në përmbajtjen e eventit */
+.event-content p {
+    color: #555; /* Ngjyrë gri */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    line-height: 1.6; /* Lartësia e rreshtit */
+}
+
+/* Kontejneri i imazhit të eventit */
+.event-image {
+    width: 100%; /* Gjerësia e plotë */
+    height: 250px; /* Lartësia fikse */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+}
+
+/* Stili i imazhit të eventit */
+.event-image img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+    transition: transform 0.3s ease; /* Animacion i transformimit */
+}
+
+/* Efekti kur kursori kalon mbi imazhin */
+.event-image img:hover {
+    transform: scale(1.05); /* Zmadhohet 5% */
+}
+
+/* Stili i tekstit të theksuar */
+.highlight-text {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-style: italic; /* Tekst i pjerrët */
+    font-weight: 500; /* Trashësia e fontit */
+}
+
+/* SEKSIONI I MEDIAVE - Zona e mbulimit mediatik */
+.media-presence {
+    background-color: #f8f8f8; /* Ngjyrë gri shumë e lehtë */
+    padding: 50px 20px; /* Hapësira e brendshme */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i titullit në seksionin e mediave */
+.media-presence h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në seksionin e mediave */
+.media-presence p {
+    max-width: 800px; /* Gjerësia maksimale */
+    margin: 0 auto 30px; /* Qendërzimi horizontal me hapësirë 30px poshtë */
+    color: #555; /* Ngjyrë gri */
+}
+
+/* Kontejneri i logove të mediave */
+.media-logos {
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    gap: 30px; /* Hapësira ndërmjet logove */
+    max-width: 1000px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i imazheve të logove */
+.media-logos img {
+    height: 50px; /* Lartësia fikse */
+    object-fit: contain; /* Mbush hapësirën duke ruajtur proporcionin e plotë */
+    filter: grayscale(100%); /* Filtër bardhë e zi */
+    transition: filter 0.3s ease; /* Animacion i ndryshimit të filtrit */
+}
+
+/* Efekti kur kursori kalon mbi logot */
+.media-logos img:hover {
+    filter: grayscale(0%); /* Heq filtrin bardhë e zi */
+}
+
+/* SEKSIONI I REPERTORIT - Zona e informacionit për repertorin */
+.repertoire {
+    padding: 60px 20px; /* Hapësira e brendshme */
+    background-color: white; /* Sfond i bardhë */
+}
+
+/* Kontejneri i përmbajtjes së repertorit */
+.repertoire-content {
+    display: flex; /* Përdorim layout flex */
+    max-width: 1100px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+    align-items: center; /* Qendërzim vertikal */
+    gap: 40px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Zona e tekstit në seksionin e repertorit */
+.repertoire-text {
+    flex: 1; /* Zë hapësirën e disponueshme */
+}
+
+/* Stili i titullit në seksionin e repertorit */
+.repertoire-text h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Lista e gjuhëve në repertor */
+.languages {
+    display: flex; /* Përdorim layout flex */
+    list-style-type: none; /* Pa pika liste */
+    gap: 15px; /* Hapësira ndërmjet elementëve */
+    margin: 15px 0; /* Hapësira lart/poshtë */
+    padding: 0; /* Pa hapësirë të brendshme */
+}
+
+/* Stili i elementëve të listës së gjuhëve */
+.languages li {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    padding: 8px 15px; /* Hapësira e brendshme */
+    border-radius: 20px; /* Këndet shumë të rrumbullakosura */
+    font-weight: 500; /* Trashësia e fontit */
+}
+
+/* Kontejneri i imazhit në seksionin e repertorit */
+.repertoire-image {
+    flex: 1; /* Zë hapësirën e disponueshme */
+    height: 300px; /* Lartësia fikse */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+}
+
+/* Stili i imazhit në seksionin e repertorit */
+.repertoire-image img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+}
+
+/* SEKSIONI I PROVAVE - Zona e informacionit për provat */
+.practice-info {
+    padding: 60px 20px; /* Hapësira e brendshme */
+    background-color: #f8f8f8; /* Ngjyrë gri shumë e lehtë */
+}
+
+/* Kontejneri i përmbajtjes së provave */
+.practice-content {
+    display: flex; /* Përdorim layout flex */
+    max-width: 1100px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+    align-items: center; /* Qendërzim vertikal */
+    gap: 40px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Kontejneri i imazhit në seksionin e provave */
+.practice-image {
+    flex: 1; /* Zë hapësirën e disponueshme */
+    height: 300px; /* Lartësia fikse */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+}
+
+/* Stili i imazhit në seksionin e provave */
+.practice-image img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+}
+
+/* Zona e tekstit në seksionin e provave */
+.practice-text {
+    flex: 1; /* Zë hapësirën e disponueshme */
+}
+
+/* Stili i titullit në seksionin e provave */
+.practice-text h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në seksionin e provave */
+.practice-text p {
+    margin-bottom: 20px; /* Hapësira poshtë */
+    color: #555; /* Ngjyrë gri */
+}
+
+/* SEKSIONI I EVENTEVE TË ARDHSHME - Zona e informacionit për koncertet e ardhshme */
+.upcoming-events {
+    padding: 60px 20px; /* Hapësira e brendshme */
+    background-color: white; /* Sfond i bardhë */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i titullit në seksionin e eventeve të ardhshme */
+.upcoming-events h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 40px; /* Hapësira poshtë */
+}
+
+/* Slideshow i eventeve */
+.event-slider {
+    display: flex; /* Përdorim layout flex */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    max-width: 1000px; /* Gjerësia maksimale */
+    margin: 0 auto 20px; /* Qendërzimi horizontal me hapësirë 20px poshtë */
+}
+
+/* Secila slide në slideshow */
+.event-slide {
+    min-width: 100%; /* Gjerësia minimale 100% */
+    display: flex; /* Përdorim layout flex */
+    padding: 20px; /* Hapësira e brendshme */
+    background-color: #f8f8f8; /* Ngjyrë gri shumë e lehtë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    gap: 20px; /* Hapësira ndërmjet elementëve */
+    align-items: center; /* Qendërzim vertikal */
+    transition: transform 0.5s ease; /* Animacion i transformimit */
+}
+
+/* Zona e datës në eventet e ardhshme */
+.event-date-upcoming {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    padding: 15px; /* Hapësira e brendshme */
+    text-align: center; /* Qendërzimi i tekstit */
+    width: 100px; /* Gjerësia fikse */
+    display: flex; /* Përdorim layout flex */
+    flex-direction: column; /* Elementët shfaqen vertikalisht */
+}
+
+/* Stili i ditës në datën e eventit */
+.day {
+    font-size: 1.8rem; /* Madhësia e fontit */
+    font-weight: bold; /* Trashësia e fontit */
+    line-height: 1; /* Lartësia e rreshtit */
+}
+
+/* Stili i muajit në datën e eventit */
+.month {
+    font-size: 1rem; /* Madhësia e fontit */
+}
+
+/* Zona e informacionit për eventet e ardhshme */
+.event-info {
+    text-align: left; /* Tekst i rreshtuar majtas */
+    flex: 1; /* Zë hapësirën e disponueshme */
+}
+
+/* Stili i titullit në informacionin e eventit */
+.event-info h3 {
+    color: #333; /* Ngjyrë gri e errët */
+    margin-bottom: 10px; /* Hapësira poshtë */
+}
+
+/* Stili i vendndodhjes dhe orës së eventit */
+.location, .time {
+    color: #666; /* Ngjyrë gri */
+    margin-bottom: 5px; /* Hapësira poshtë */
+    font-size: 0.9rem; /* Madhësia e fontit */
+}
+
+/* Stili i ikonave në vendndodhjen dhe orën */
+.location i, .time i {
+    margin-right: 5px; /* Hapësira djathtas */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+}
+
+/* Kontejneri i kontrolleve të slideshow */
+.slider-controls {
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    gap: 10px; /* Hapësira ndërmjet butonave */
+    margin-top: 20px; /* Hapësira sipër */
+}
+
+/* Stili i butonave të slideshow */
+.slider-btn {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border: none; /* Pa kufi */
+    width: 40px; /* Gjerësia fikse */
+    height: 40px; /* Lartësia fikse */
+    border-radius: 50%; /* Formë rrethore */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: background-color 0.3s ease; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonat e slideshow */
+.slider-btn:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* RESPONZIVITETI - Përshtatjet për ekrane të ndryshme */
+/* Për ekranet e mesme (tableta) */
+@media (max-width: 1024px) {
+    /* Përshtatja e gjerësisë së kartës së eventit */
+    .event-card {
+        width: 100%; /* Gjerësia e plotë */
+    }
+    
+    /* Ndryshimi i drejtimit të seksioneve të repertorit dhe provave */
+    .repertoire-content, .practice-content {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+    
+    /* Përshtatja e imazheve në seksionet e repertorit dhe provave */
+    .repertoire-image, .practice-image {
+        width: 100%; /* Gjerësia e plotë */
+        max-width: 600px; /* Gjerësia maksimale */
+        margin: 0 auto; /* Qendërzimi horizontal */
+    }
+    
+    /* Qendërzimi i tekstit në seksionet e repertorit dhe provave */
+    .repertoire-text, .practice-text {
+        text-align: center; /* Qendërzimi i tekstit */
+    }
+    
+    /* Qendërzimi i listës së gjuhëve */
+    .languages {
+        justify-content: center; /* Qendërzim horizontal */
+    }
+}
+
+/* Për ekranet e vogla (telefona) */
+@media (max-width: 768px) {
+    /* Zvogëlimi i hapësirës në datën e eventit */
+    .event-date {
+        padding: 10px; /* Hapësira e brendshme zvogëluar */
+        font-size: 0.9rem; /* Madhësia e fontit zvogëluar */
+    }
+    
+    /* Zvogëlimi i titullit të eventit */
+    .event-content h3 {
+        font-size: 1.2rem; /* Madhësia e fontit zvogëluar */
+    }
+    
+    /* Zvogëlimi i lartësisë së imazhit të eventit */
+    .event-image {
+        height: 200px; /* Lartësia zvogëluar */
+    }
+    
+    /* Ndryshimi i drejtimit të slides së eventit të ardhshëm */
+    .event-slide {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+        text-align: center; /* Qendërzimi i tekstit */
+        padding: 15px; /* Hapësira e brendshme zvogëluar */
+    }
+    
+    /* Qendërzimi i datës së eventit të ardhshëm */
+    .event-date-upcoming {
+        width: 80px; /* Gjerësia zvogëluar */
+        margin: 0 auto 15px; /* Qendërzimi horizontal me hapësirë 15px poshtë */
+    }
+    
+    /* Qendërzimi i informacionit të eventit të ardhshëm */
+    .event-info {
+        text-align: center; /* Qendërzimi i tekstit */
+    }
+    
+    /* Zvogëlimi i hapësirës ndërmjet logove të mediave */
+    .media-logos {
+        gap: 15px; /* Hapësira zvogëluar */
+    }
+    
+    /* Zvogëlimi i lartësisë së logove të mediave */
+    .media-logos img {
+        height: 40px; /* Lartësia zvogëluar */
+    }
+    
+    /* Zvogëlimi i lartësisë së imazheve në seksionet e repertorit dhe provave */
+    .repertoire-image, .practice-image {
+        height: 200px; /* Lartësia zvogëluar */
+    }
+}

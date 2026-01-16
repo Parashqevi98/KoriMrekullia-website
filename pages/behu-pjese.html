@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bëhu Pjesë - Kori Mrekullia</title>
+  <!-- Lidhja me CSS bazë, CSS specifike te faqes, dhe font-awesome per ikonat -->
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/behu-pjese.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- Shtimi i librarisë EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // Inicializimi i EmailJS me çelësin publik
+      emailjs.init("gUkoXUUMokZRiEgt9");
+    })();
+  </script>
+</head>
+<body>
+  <!-- Navigacioni i faqes me menun e plote, ku 'Behu Pjese' eshte aktive -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="../asete/foto/logo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+      <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+      <li class="dropdown">
+        <a>Aktivitete</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/koncerte.html">Koncertet</a></li>
+          <li><a href="/pages/kalendari.html">Kalendari</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/behu-pjese.html" class="active">B&euml;hu Pjes&euml;</a></li>
+      <li><a href="/pages/galeria.html">Galeria</a></li>
+      <li><a href="/pages/suport.html">Suport</a></li>
+      <li class="dropdown">
+        <a>Informacione</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header i faqes me titullin kryesor -->
+  <header class="page-header">
+    <h1>B&euml;hu Pjes&euml; e Korit Mrekullia!</h1>
+  </header>
+
+  <section class="registration-container">
+    <!-- Informacione per regjistrimin dhe foto ilustruese -->
+    <div class="registration-info">
+      <h2>Regjistro f&euml;mij&euml;n t&euml;nd p&euml;r t&euml; qen&euml; pjes&euml; e nj&euml; aventure muzikore plot emocion dhe harmoni.</h2>
+      <p>Kori Mrekullia mirpret t&euml; gjith&euml; f&euml;mij&euml;t q&euml; duan t&euml; shprehen p&euml;rmes muzik&euml;s! M&euml;sues t&euml; p&euml;rkushtuar, ambiente t&euml; sigurta dhe shum&euml; dashuri p&euml;r artin e k&euml;ng&euml;s. Regjistrohuni tani dhe b&euml;hu pjes&euml; e magjis&euml; s&euml; z&euml;rit!</p>
+      <div class="registration-image">
+        <img src="../asete/foto/behu-pjese.jpg" alt="F&euml;mij&euml; k&euml;ndojn&euml;" />
+      </div>
+    </div>
+
+    <div class="registration-form">
+      <h2>Forma e Pyet&euml;sorit</h2>
+      <form id="joinForm" enctype="multipart/form-data">
+        <!-- Seksioni i formes per te dhenat e femijeve me fushat e kerkuara dhe validimin -->
+        <div class="form-section">
+          <h3>T&euml; dh&euml;nat e f&euml;mij&euml;s</h3>
+          
+          <div class="form-group">
+            <label for="childName">Emri dhe Mbiemri <span class="required">*</span></label>
+            <input type="text" id="childName" name="childName" required>
+            <span class="error-message" id="childNameError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="childBirthdate">Data e lindjes <span class="required">*</span></label>
+            <input type="date" id="childBirthdate" name="childBirthdate" required>
+            <span class="error-message" id="childBirthdateError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="childGender">Gjinia</label>
+            <select id="childGender" name="childGender">
+              <option value="">Zgjidhni</option>
+              <option value="femer">Fem&euml;r</option>
+              <option value="mashkull">Mashkull</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label for="school">Shkolla <span class="required">*</span></label>
+            <input type="text" id="school" name="school" required>
+            <span class="error-message" id="schoolError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="childPhoto">Foto e f&euml;mij&euml;s</label>
+            <div class="file-upload-container">
+              <input type="file" id="childPhoto" name="childPhoto" accept="image/*" class="file-input">
+              <label for="childPhoto" class="file-label">
+                <i class="fas fa-upload"></i> Zgjidh nj&euml; foto
+              </label>
+              <span class="file-name" id="childPhotoName">Asnj&euml; skedar i zgjedhur</span>
+            </div>
+            <span class="file-hint">Formatet e pranuara: JPG, PNG, JPEG (max. 5MB)</span>
+            <span class="error-message" id="childPhotoError"></span>
+          </div>
+        </div>
+        
+        <!-- Seksioni i formes per te dhenat e prindit/kujdestarit -->
+        <div class="form-section">
+          <h3>T&euml; dh&euml;nat e prindit/kujdestarit</h3>
+          
+          <div class="form-group">
+            <label for="parentName">Emri dhe Mbiemri <span class="required">*</span></label>
+            <input type="text" id="parentName" name="parentName" required>
+            <span class="error-message" id="parentNameError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="relationship">Marr&euml;dh&euml;nia me f&euml;mij&euml;n <span class="required">*</span></label>
+            <input type="text" id="relationship" name="relationship" placeholder="p.sh. Prind, Kujdestar, etj." required>
+            <span class="error-message" id="relationshipError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">Numri i telefonit <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required>
+            <span class="error-message" id="phoneError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="email">Email-i <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+          
+          <div class="form-group">
+            <label for="documents">Dokumenti i identifikimit  <span class="required">*</span></label>
+            <div class="file-upload-container">
+              <input type="file" id="documents" name="documents" accept=".pdf,.doc,.docx" class="file-input" required>
+              <label for="documents" class="file-label">
+                <i class="fas fa-file-upload"></i> Ngarko dokument
+              </label>
+              <span class="file-name" id="documentsName">Asnj&euml; skedar i zgjedhur</span>
+            </div>
+            <span class="file-hint">Formatet e pranuara: PDF, DOC, DOCX (max. 10MB). Ju lutemi ngarkoni nj&euml; dokument identifikimi t&euml; vlefsh&euml;m.</span>
+            <span class="error-message" id="documentsError"></span>
+          </div>
+        </div>
+        
+        <!-- Seksioni i formes per informacionin shtese, pervojat e meparshme dhe pranimin e kushteve -->
+        <div class="form-section">
+          <h3>Informacion shtes&euml;</h3>
+          
+          <div class="form-group">
+            <label for="experience">A ka marr&euml; m&euml;sime muzike apo ka qen&euml; pjes&euml; e nj&euml; kori?</label>
+            <textarea id="experience" name="experience" rows="3"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label for="timePreference">Preferenca p&euml;r oraret <span class="required">*</span></label>
+            <select id="timePreference" name="timePreference" required>
+              <option value="">Zgjidhni</option>
+              <option value="pasdite">E shtun&euml; - 10:30-11:30</option>
+              <option value="mbasdite">E shtun&euml; - 12:30-13:30</option>
+            </select>
+            <span class="error-message" id="timePreferenceError"></span>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <label>Zgjedhja e kursit <span class="required">*</span></label>
+            <div class="checkbox-options">
+              <div class="checkbox-option">
+                <input type="radio" id="beginner" name="courseLevel" value="beginner" required>
+                <label for="beginner">Fillestare (4-9 vjeç)</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="radio" id="intermediate" name="courseLevel" value="intermediate">
+                <label for="intermediate">I mes&euml;m (10-12 vjeç)</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="radio" id="advanced" name="courseLevel" value="advanced">
+                <label for="advanced">I avancuar (13-15 vjeç)</label>
+              </div>
+            </div>
+            <span class="error-message" id="courseLevelError"></span>
+          </div>
+          
+          <div class="form-group checkbox-group">
+            <label>Pranimi i kushteve <span class="required">*</span></label>
+            <div class="checkbox-options">
+              <div class="checkbox-option">
+                <input type="checkbox" id="termsAgreement" name="termsAgreement" required>
+                <label for="termsAgreement">Un&euml; pranoj kushtet dhe rregullat e Korit Mrekullia</label>
+              </div>
+              <div class="checkbox-option">
+                <input type="checkbox" id="privacyAgreement" name="privacyAgreement" required>
+                <label for="privacyAgreement">Un&euml; pranoj q&euml; t&euml; dh&euml;nat t&euml; p&euml;rdoren n&euml; p&euml;rputhje me politik&euml;n e privat&euml;sis&euml;</label>
+              </div>
+            </div>
+            <span class="error-message" id="termsError"></span>
+          </div>
+        </div>
+        
+        <!-- Butoni i dergimit te formularit -->
+        <div class="form-submit">
+          <button type="submit" class="submit-btn">D&euml;rgo Aplikimin</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seksioni qe tregon perfitimet e pjesemarrjes ne kor me kartat informuese -->
+  <section class="why-join">
+    <h2>Pse t&euml; b&euml;heni pjes&euml; e Korit Mrekullia?</h2>
+    <div class="benefits-container">
+      <div class="benefit-card">
+        <i class="fas fa-music"></i>
+        <h3>Zhvillim muzikor</h3>
+        <p>M&euml;soni teknikat e duhura t&euml; k&euml;ndimit dhe zhvilloni talentin tuaj muzikor.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-users"></i>
+        <h3>Miq&euml;si t&euml; reja</h3>
+        <p>Njihuni me f&euml;mij&euml; t&euml; tjer&euml; pasionant&euml; pas muzik&euml;s dhe krijoni miq&euml;si t&euml; reja.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-star"></i>
+        <h3>Performanca</h3>
+        <p>Mund&euml;sia p&euml;r t&euml; performuar n&euml; koncerte, festivale dhe evenimente t&euml; ndryshme.</p>
+      </div>
+      <div class="benefit-card">
+        <i class="fas fa-brain"></i>
+        <h3>Zhvillim personal</h3>
+        <p>Forconi vet&euml;besimin, disiplin&euml;n dhe aft&euml;sit&euml; e pun&euml;s n&euml; grup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Lidhja me skripta JavaScript -->
+  <script src="../js/index.js"></script>
+  <script src="../js/behu-pjese.js"></script>
+</body>
+</html>

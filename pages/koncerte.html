@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lidhja me CSS-të e nevojshme dhe Font Awesome për ikonat -->
+  <title>Koncertet - Kori Mrekullia</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/koncerte.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigimi i faqes me menunë kryesore dhe nënmenutë dropdown -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="../asete/foto/logo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+      <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+      <li class="dropdown">
+        <a class="active">Aktivitete</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/koncerte.html" class="active">Koncertet</a></li>
+          <li><a href="/pages/kalendari.html">Kalendari</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+      <li><a href="/pages/galeria.html">Galeria</a></li>
+      <li><a href="/pages/suport.html">Suport</a></li>
+      <li class="dropdown">
+        <a>Informacione</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Titulli dhe përshkrimi i faqes -->
+  <div class="page-header">
+    <h1>Koncertet Tona</h1>
+    <p>P&euml;rformanca dhe evenimente t&euml; ndryshme nga Kori Mrekullia p&euml;rgjat&euml; viteve</p>
+  </div>
+
+  <!-- Seksioni me video të performancës kryesore -->
+  <section class="video-container">
+    <div class="video-wrapper">
+      <video id="koncert-video" controls poster="../asete/foto/koncertRecitalThumbnail.png">
+        <source src="../asete/video/koncertRecital.mp4" type="video/mp4">
+        Shfletuesi juaj nuk mbështet etiketen video.
+      </video>
+      <div class="video-caption">
+        <h3>Performanca jon&euml; n&euml; Televizionin Top Channel</h3>
+        <p>Kori "Mrekullia" mori pjes&euml; n&euml; nj&euml; koncert t&euml; mund&euml;suar nga televizioni Top-Channel n&euml; bashk&euml;punim me band&euml;n e tyre. </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksioni i historikut të koncerteve dhe performancave të mëparshme -->
+  <section class="events-timeline">
+    <h2>Historiku i Koncerteve dhe Performancave</h2>
+    
+
+    <div class="event-card">
+      <div class="event-date">
+        <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+        <span>Dhjetor 2014 – Vazhdon çdo vit</span>
+      </div>
+      <div class="event-content">
+        <h3>Koncerti i Krishtlindjes</h3>
+        <p>Organizohet çdo muaj Dhjetor, si pjes&euml; e tradit&euml;s vjetore t&euml; korit.</p>
+        <div class="event-image">
+          <img src="../asete/foto/fundvit.jpg" alt="Koncerti i Krishtlindjes" />
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">
+        <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+        <span>Qershor 2015 – Vazhdon çdo vit</span>
+      </div>
+      <div class="event-content">
+        <h3>Koncerti i Fundvitit Artistik</h3>
+        <p>Mbahet çdo Qershor, n&euml; mbyllje t&euml; sezonit artistik t&euml; korit.</p>
+        <div class="event-image">
+          <img src="../asete/foto/galeri3.jpg" alt="Koncerti i Qershorit" />
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">
+        <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+        <span>Qershor 2021 – Vazhdon çdo vit</span>
+      </div>
+      <div class="event-content">
+        <h3>Festivali "Qershori Yn&euml;, Mir&euml; se Vjen" – Tiran&euml;</h3>
+        <p>Kori b&euml;het pjes&euml; e r&euml;nd&euml;sishme e k&euml;tij takimi t&euml; koreve p&euml;r f&euml;mij&euml;. Shembull pozitiv n&euml; krijimin e <strong>rrjetit t&euml; koreve p&euml;r f&euml;mij&euml; n&euml; Shqip&euml;ri</strong>.</p>
+        <div class="event-image">
+          <img src="../asete/foto/rrethnesh1.png" alt="Festivali Qershori Ynë" />
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">
+        <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+        <span>Gjat&euml; vitit 2023</span>
+      </div>
+      <div class="event-content">
+        <h3>Bashk&euml;punim me UNFPA</h3>
+        <p>Performanca dhe koncerte n&euml; kuad&euml;r t&euml; projektit: <span class="highlight-text">Tjet&euml;r her&euml; me Vajz&euml;...</span></p>
+        <div class="event-image">
+          <img src="../asete/foto/rrethnesh2.png" alt="Bashkëpunim me UNFPA" />
+        </div>
+      </div>
+    </div>
+
+    <div class="event-card">
+      <div class="event-date">
+        <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+        <span>Maj 2024</span>
+      </div>
+      <div class="event-content">
+        <h3>Performanc&euml; n&euml; Maqedonin&euml; e Veriut</h3>
+        <p>Kori "Mrekullia" performon dhe bashk&euml;punon me korin e SHFK <strong>"V&euml;llaz&euml;rim Bashkim" – Oh&euml;r</strong>. Nj&euml; shk&euml;mbim artistik nd&euml;rkufitar i suksessh&euml;m.</p>
+        <div class="event-image">
+          <img src="../asete/foto/galerigrupi.jpg" alt="Performancë në Maqedoninë e Veriut" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksioni i prezencës mediatike me logot e televizioneve partnere -->
+  <section class="media-presence">
+    <h2>Prezenc&euml; Mediatike</h2>
+    <p>Kori &euml;sht&euml; regjistruar dhe transmetuar n&euml; pothuajse t&euml; gjitha televizionet komb&euml;tare si: <strong>Top Channel, Klan, News 24, Top News, Report TV</strong>, etj.</p>
+    <div class="media-logos">
+      <img src="../asete/foto/topchanel.png" alt="Top Channel" />
+      <img src="../asete/foto/rrethnesh4.png" alt="TV Klan" />
+      <img src="../asete/foto/index2.png" alt="News 24" />
+      <img src="../asete/foto/galeri3.jpg" alt="Top News" />
+      <img src="../asete/foto/rrethnesh3.png" alt="Report TV" />
+    </div>
+  </section>
+
+  <!-- Seksioni i gjuhëve dhe repertorit të korit -->
+  <section class="repertoire">
+    <div class="repertoire-content">
+      <div class="repertoire-text">
+        <h2>Gjuha & Repertori</h2>
+        <p>Kori "Mrekullia" interpreton n&euml; disa gjuh&euml;:</p>
+        <ul class="languages">
+          <li>Shqip</li>
+          <li>Italisht</li>
+          <li>Anglisht</li>
+          <li>Gjermanisht</li>
+        </ul>
+        <p>Repertori p&euml;rfshin kryesisht k&euml;ng&euml; p&euml;r f&euml;mij&euml; me p&euml;rmbajtje edukative dhe artistike.</p>
+      </div>
+      <div class="repertoire-image">
+        <img src="../asete/foto/prova2.jpg" alt="Foto"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksioni i informacionit për provat e korit -->
+  <section class="practice-info">
+    <div class="practice-content">
+      <div class="practice-image">
+        <img src="../asete/foto/prova3.jpg" alt="Provat e korit" />
+      </div>
+      <div class="practice-text">
+        <h2>Provat</h2>
+        <p>Q&euml; prej krijimit, kori organizon <strong>prova t&euml; rregullta gjat&euml; gjith&euml; vitit</strong> me p&euml;rkushtim dhe profesionalizëm.</p>
+        <a href="/pages/behu-pjese.html" class="btn">B&euml;hu pjes&euml; e korit</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksioni i eventeve të ardhshme me slider -->
+  <section class="upcoming-events">
+    <h2>Eventet e Ardhshme</h2>
+    <div class="event-slider" id="eventSlider">
+      <div class="event-slide">
+        <div class="event-date-upcoming">
+          <span class="day">15</span>
+          <span class="month">Maj</span>
+        </div>
+        <div class="event-info">
+          <h3>Koncerti Pranveror</h3>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Teatri i Operas dhe Baletit, Tiran&euml;</p>
+          <p class="time"><i class="far fa-clock"></i> 18:00</p>
+        
+        </div>
+      </div>
+      <div class="event-slide">
+        <div class="event-date-upcoming">
+          <span class="day">22</span>
+          <span class="month">Qershor</span>
+        </div>
+        <div class="event-info">
+          <h3>Koncerti i Fundvitit Artistik 2025</h3>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Pallati i Kongreseve, Tiran&euml;</p>
+          <p class="time"><i class="far fa-clock"></i> 17:30</p>
+         
+        </div>
+      </div>
+      <div class="event-slide">
+        <div class="event-date-upcoming">
+          <span class="day">10</span>
+          <span class="month">Korrik</span>
+        </div>
+        <div class="event-info">
+          <h3>Festivali Nd&euml;rkomb&euml;tar i Koreve p&euml;r F&euml;mij&euml;</h3>
+          <p class="location"><i class="fas fa-map-marker-alt"></i> Amfiteatri i Tiran&euml;s</p>
+          <p class="time"><i class="far fa-clock"></i> 19:00</p>
+         
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button id="prevBtn" class="slider-btn"><i class="fas fa-chevron-left"></i></button>
+      <button id="nextBtn" class="slider-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Skriptat JavaScript për funksionalitetin e faqes dhe slider-ave -->
+  <script src="../js/index.js"></script>
+  <script src="../js/koncerte.js"></script>
+</body>
+</html>

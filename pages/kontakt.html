@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lidhja me CSS-të e nevojshme dhe Font Awesome për ikonat -->
+    <title>Kontakto - Kori i F&euml;mij&euml;ve Mrekullia</title>
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="stylesheet" href="../css/kontakt.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Shtimi i librarisë EmailJS për dërgimin e emaileve -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+      // Inicializimi në krye të faqes
+      (function() {
+        emailjs.init("gUkoXUUMokZRiEgt9");
+      })();
+    </script>
+</head>
+<body>
+    <!-- Navigimi i faqes me menu dhe nënmenu dropdown -->
+    <nav class="navbar">
+        <div class="logo">
+          <img src="../asete/foto/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+          <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+          <li class="dropdown">
+            <a>Aktivitete</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/koncerte.html">Koncertet</a></li>
+              <li><a href="/pages/kalendari.html">Kalendari</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+          <li><a href="/pages/galeria.html">Galeria</a></li>
+          <li><a href="/pages/suport.html">Suport</a></li>
+          <li class="dropdown">
+            <a>Informacione</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/kontakt.html" class="active">Kontakt</a></li>
+        </ul>
+      </nav> 
+
+    <!-- Titulli kryesor i faqes -->
+    <div class="header">
+        <h2>Kori i F&euml;mij&euml;ve "Mrekullia"</h2>
+    </div>
+    
+    <!-- Kontejneri kryesor që përmban seksionet e informacionit dhe formës -->
+    <div class="container">
+        <!-- Seksioni i informacionit të kontaktit -->
+        <div class="contact-info">
+            <h1>Kontakto</h1>
+            <p>P&euml;r t&euml; na kontaktuar mund t&euml; p&euml;rdorni form&euml;n ose d&euml;rgoni nj&euml; email. Gjithashtu edhe mund t&euml; na telefononi.</p>
+            
+            <div class="contact-item">
+                <div class="icon">📞</div>
+                <div>+355 67 635 7008</div>
+            </div>
+            
+            <div class="contact-item">
+                <div class="icon">✉️</div>
+                <div>kori.mrekullia@gmail.com</div>
+            </div>
+
+            <div class="contact-item">
+              <div class="icon">✉️</div>
+              <div>alliubujar@gmail.com</div>
+          </div>
+            
+            <div class="contact-item">
+                <div class="icon">📍</div>
+                <div>
+                    Rr. Sk&euml;nderbeu Nr. 15<br>
+                    Tiran&euml;, Shqip&euml;ri 1001
+                </div>
+            </div>
+        </div>
+        
+        <!-- Seksioni i formës së kontaktit me validim -->
+        <div class="contact-form-container">
+            <h3 class="form-title">Na Shkruani</h3>
+            <form id="contactForm" novalidate>
+                <div class="form-group">
+                    <label>Emri*</label>
+                    <div class="name-fields">
+                        <div style="flex: 1;">
+                            <input type="text" id="firstName" name="firstName" placeholder="Emri" required>
+                            <div id="firstNameError" class="error-message"></div>
+                        </div>
+                        <div style="flex: 1;">
+                            <input type="text" id="lastName" name="lastName" placeholder="Mbiemri" required>
+                            <div id="lastNameError" class="error-message"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" id="email" name="email" placeholder="shembulli@email.com" required>
+                    <div id="emailError" class="error-message"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Telefoni (opsionale)</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+355 69 XXX XXXX">
+                    <div id="phoneError" class="error-message"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Mesazhi*</label>
+                    <textarea id="message" name="message" placeholder="Shkruani mesazhin tuaj..." required></textarea>
+                    <div id="messageError" class="error-message"></div>
+                </div>
+                
+                <button type="submit">D&euml;rgo</button>
+            </form>
+        </div>
+    </div>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+    
+      <!-- Skriptat JavaScript për funksionalitetin e faqes dhe formës së kontaktit -->
+      <script src="../js/index.js"></script>
+      <script src="../js/kontakt.js"></script>
+    
+</body>
+</html>

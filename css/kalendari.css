@@ -1,0 +1,325 @@
+/* Stili i numëruesit të eventeve shtesë në një kuti */
+.more-events {
+    background-color: #888; /* Ngjyrë gri për sfondin */
+    color: white; /* Tekst i bardhë */
+    padding: 2px 4px; /* Hapësira e brendshme: 2px lart/poshtë, 4px majtas/djathtas */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-top: 3px; /* Hapësira sipër */
+    font-size: 0.7rem; /* Madhësia e vogël e fontit */
+    text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Stilet kryesore të kalendarit */
+/* Titulli i faqes */
+.page-title {
+    text-align: center; /* Qendërzimi i tekstit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin: 40px 0 20px; /* Hapësira: 40px lart, 0 anash, 20px poshtë */
+    font-size: 2rem; /* Madhësia e fontit */
+}
+
+/* Kontejneri kryesor i seksionit të kalendarit */
+.calendar-section {
+    display: flex; /* Përdorim layout flex */
+    flex-direction: row; /* Elementët shfaqen horizontalisht */
+    justify-content: center; /* Qendërzim horizontal */
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto 50px; /* Qendërzim horizontal me hapësirë 50px poshtë */
+    padding: 0 20px; /* Hapësira e brendshme vetëm anash */
+}
+
+/* Stilizimi i shirit anësor (sidebar) */
+.sidebar {
+    width: 300px; /* Gjerësia fikse */
+    margin-right: 30px; /* Hapësira djathtas */
+}
+
+/* Stili i përbashkët për kutitë në sidebar */
+.date-picker,
+.filters,
+.info-box {
+    background-color: #FFF; /* Sfond i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+    padding: 20px; /* Hapësira e brendshme */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Stili i titujve në kutitë e sidebar */
+.date-picker h3,
+.filters h3,
+.info-box h3 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-top: 0; /* Pa hapësirë sipër */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    font-size: 1.2rem; /* Madhësia e fontit */
+}
+
+/* Stili i fushës së zgjedhjes së datës */
+.date-picker input[type="date"] {
+    width: 100%; /* Gjerësia e plotë */
+    padding: 10px; /* Hapësira e brendshme */
+    border: 1px solid #ddd; /* Kufi i hollë gri */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    margin-bottom: 10px; /* Hapësira poshtë */
+}
+
+/* Stili i butonit në kalendar */
+.cal-button {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border: none; /* Pa kufi */
+    padding: 10px 15px; /* Hapësira e brendshme */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    font-size: 0.9rem; /* Madhësia e fontit */
+    transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi buton */
+.cal-button:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* Stili i etiketave në filtrat */
+.filters label {
+    display: block; /* Shfaqet si bllok */
+    margin-bottom: 12px; /* Hapësira poshtë */
+    font-size: 0.95rem; /* Madhësia e fontit */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+}
+
+/* Stili i checkbox-ave në filtrat */
+.filters input[type="checkbox"] {
+    margin-right: 8px; /* Hapësira djathtas */
+}
+
+/* Lartësia minimale për kutinë e informacionit */
+.info-box {
+    min-height: 200px; /* Lartësia minimale */
+}
+
+/* Stilizimi i zonës së kalendarit */
+.calendar-area {
+    flex-grow: 1; /* Zë hapësirën e disponueshme */
+    background-color: #FFF; /* Sfond i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+    padding: 20px; /* Hapësira e brendshme */
+    max-width: 800px; /* Kufizojmë gjerësinë maksimale */
+}
+
+/* Kontejneri i kontrolleve të kalendarit (muaji, butonat para/pas) */
+.calendar-controls {
+    display: flex; /* Përdorim layout flex */
+    justify-content: space-between; /* Shpërndarje e elementëve në hapësirën e disponueshme */
+    align-items: center; /* Qendërzim vertikal */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Stili i etiketës së muajit */
+.month-label {
+    font-size: 1.3rem; /* Madhësia e fontit */
+    font-weight: bold; /* Trashësia e fontit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+}
+
+/* Rreshti i ditëve të javës */
+.weekdays {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(7, 1fr); /* 7 kolona me gjerësi të barabartë */
+    gap: 8px; /* Hapësira ndërmjet elementëve */
+    margin-bottom: 10px; /* Hapësira poshtë */
+    text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i secilës ditë të javës */
+.weekdays div {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    padding: 10px 0; /* Hapësira e brendshme vetëm lart/poshtë */
+    font-weight: bold; /* Trashësia e fontit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    font-size: 0.9rem; /* Madhësia e fontit */
+}
+
+/* Përmirësimi i paraqitjes së kalendarit */
+.calendar-grid {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(7, 1fr); /* 7 kolona me gjerësi të barabartë */
+    gap: 8px; /* Hapësira ndërmjet kutive */
+    height: auto; /* Lartësia automatike */
+    max-height: 600px; /* Kufizojmë lartësinë maksimale */
+}
+
+/* Sigurohemi që çdo kutizë në kalendar ka përmasat e njëjta */
+.calendar-grid > div {
+    aspect-ratio: 1/1; /* Proporcion 1:1 (katrore) */
+    min-height: 60px; /* Lartësia minimale */
+    max-height: 100px; /* Lartësia maksimale */
+    overflow: hidden; /* Fshehim përmbajtjen që del jashtë */
+}
+
+/* Stili i secilës ditë në kalendar */
+.day {
+    background-color: #f9f9f9; /* Ngjyrë gri shumë e lehtë */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    padding: 6px; /* Hapësira e brendshme */
+    position: relative; /* Pozicionim relativ */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: transform 0.2s; /* Animacion i transformimit */
+    display: flex; /* Përdorim layout flex */
+    flex-direction: column; /* Elementët shfaqen vertikalisht */
+    height: 100%; /* Përdorim të gjithë lartësinë */
+    overflow-y: auto; /* Mundëson lëvizjen vertikale nëse përmbajtja është e gjatë */
+}
+
+/* Efekti kur kursori kalon mbi një ditë */
+.day:hover {
+    transform: translateY(-3px); /* Ngritje e lehtë lart */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Hije më e theksuar */
+}
+
+/* Stili i numrit të ditës */
+.day .label {
+    font-weight: bold; /* Trashësia e fontit */
+    color: #333; /* Ngjyra gri e errët */
+    margin-bottom: 5px; /* Hapësira poshtë */
+}
+
+/* Stili i ditës së zgjedhur */
+.day.active {
+    border: 2px solid #9C2D2F; /* Kufi i kuq */
+    box-shadow: 0 0 8px rgba(156, 45, 47, 0.4); /* Hije e kuqe */
+}
+
+/* Stili i ditës aktuale (sot) */
+.today {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+}
+
+/* Stili bazë i eventeve në kalendar */
+.event {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    padding: 5px 8px; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-bottom: 5px; /* Hapësira poshtë */
+    font-size: 0.8rem; /* Madhësia e fontit */
+    overflow: hidden; /* Fshehim tekstin që del jashtë */
+    text-overflow: ellipsis; /* Tregon "..." për tekstin e fshehur */
+    white-space: nowrap; /* Pa thyerje të tekstit */
+}
+
+/* Ngjyrat e ndryshme për kategoritë e eventeve */
+.event-prove {
+    background-color: #3498db; /* Ngjyrë blu */
+}
+
+.event-koncert {
+    background-color: #9C2D2F; /* Ngjyrë e kuqe */
+}
+
+.event-prinder {
+    background-color: #2ecc71; /* Ngjyrë e gjelbër */
+}
+
+/* Stilizimi i detajeve të eventit në kutinë e informatave */
+.event-details {
+    padding: 10px 0; /* Hapësira e brendshme vetëm lart/poshtë */
+}
+
+/* Stili i paragrafëve në detajet e eventit */
+.event-details p {
+    margin: 5px 0; /* Hapësira lart/poshtë */
+}
+
+/* Stili i ikonave në detajet e eventit */
+.event-details i {
+    width: 20px; /* Gjerësia fikse */
+    margin-right: 5px; /* Hapësira djathtas */
+    text-align: center; /* Qendërzimi i tekstit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+}
+
+/* Përshtatjet për pajisjet me ekrane të mesme (tableta) */
+@media (max-width: 991px) {
+    /* Ndryshimi i drejtimit të seksionit të kalendarit */
+    .calendar-section {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+
+    /* Rregullimi i sidebar për tableta */
+    .sidebar {
+        width: 100%; /* Gjerësia e plotë */
+        margin-right: 0; /* Pa hapësirë djathtas */
+        margin-bottom: 30px; /* Hapësira poshtë */
+    }
+
+    /* Qendërzimi i kutive në sidebar */
+    .date-picker, .filters, .info-box {
+        max-width: 600px; /* Gjerësia maksimale */
+        margin-left: auto; /* Qendërzim horizontal */
+        margin-right: auto; /* Qendërzim horizontal */
+    }
+}
+
+/* Përshtatjet për pajisjet me ekrane të vogla (telefona) */
+@media (max-width: 768px) {
+    /* Zvogëlimi i fontit për ditët e javës */
+    .weekdays {
+        font-size: 0.8rem; /* Madhësia e fontit zvogëluar */
+    }
+
+    /* Zvogëlimi i hapësirës në ditët e kalendarit */
+    .day {
+        padding: 6px; /* Hapësira e brendshme zvogëluar */
+    }
+
+    /* Zvogëlimi i hapësirës dhe fontit për eventet */
+    .event {
+        padding: 3px 6px; /* Hapësira e brendshme zvogëluar */
+        font-size: 0.7rem; /* Madhësia e fontit zvogëluar */
+    }
+
+    /* Rritja e lartësisë minimale të kutive të kalendarit */
+    .calendar-grid > div {
+        min-height: 70px; /* Lartësia minimale rritur */
+    }
+}
+
+/* Përshtatjet për pajisjet me ekrane shumë të vogla */
+@media (max-width: 576px) {
+    /* Zvogëlimi i hapësirës në zonën e kalendarit */
+    .calendar-area {
+        padding: 10px; /* Hapësira e brendshme zvogëluar */
+    }
+
+    /* Zvogëlimi i hapësirës dhe fontit për ditët e javës */
+    .weekdays div {
+        padding: 8px 0; /* Hapësira e brendshme zvogëluar */
+        font-size: 0.7rem; /* Madhësia e fontit zvogëluar */
+    }
+
+    /* Zvogëlimi i hapësirës në ditët e kalendarit */
+    .day {
+        padding: 4px; /* Hapësira e brendshme zvogëluar */
+    }
+
+    /* Zvogëlimi i fontit për numrin e ditës */
+    .day .label {
+        font-size: 0.8rem; /* Madhësia e fontit zvogëluar */
+    }
+
+    /* Zvogëlimi i hapësirës dhe fontit për eventet */
+    .event {
+        margin-bottom: 3px; /* Hapësira poshtë zvogëluar */
+        padding: 2px 4px; /* Hapësira e brendshme zvogëluar */
+        font-size: 0.65rem; /* Madhësia e fontit zvogëluar edhe më shumë */
+    }
+
+    /* Zvogëlimi i lartësisë minimale të kutive të kalendarit */
+    .calendar-grid > div {
+        min-height: 60px; /* Lartësia minimale zvogëluar */
+    }
+}

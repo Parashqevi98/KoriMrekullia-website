@@ -1,0 +1,359 @@
+/* GALERIA CSS - Stilet për galerinë e fotove dhe videove */
+
+/* Koka e faqes - zona kryesore në krye të faqes */
+.page-header {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e errët e sfondit */
+    color: white; /* Ngjyra e bardhë e tekstit */
+    text-align: center; /* Qendërzimi i tekstit */
+    padding: 50px 20px; /* Hapësira e brendshme: 50px lart/poshtë, 20px majtas/djathtas */
+    margin-bottom: 20px; /* Hapësira poshtë */
+}
+
+/* Stili i titullit kryesor në kokën e faqes */
+.page-header h1 {
+    font-size: 2.2rem; /* Madhësia e fontit */
+    margin-bottom: 10px; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në kokën e faqes */
+.page-header p {
+    font-style: italic; /* Tekst i pjerrët */
+    font-size: 1.1rem; /* Madhësia e fontit */
+}
+
+/* Filtrat e galerisë - butonat e kategorive */
+.gallery-filter {
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzimi horizontal */
+    gap: 15px; /* Hapësira ndërmjet butonave */
+    margin-bottom: 30px; /* Hapësira poshtë */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    padding: 0 20px; /* Hapësira e brendshme vetëm anash */
+}
+
+/* Stili i butonit të filtrit */
+.filter-btn {
+    background-color: #F7D1D1; /* Ngjyrë rozë shumë e lehtë */
+    border: none; /* Pa kufi */
+    color: #333; /* Ngjyra e tekstit gri e errët */
+    padding: 10px 20px; /* Hapësira e brendshme */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    font-weight: 500; /* Trashësia e fontit */
+    transition: all 0.3s ease; /* Animacion për të gjitha ndryshimet */
+}
+
+/* Efekti kur kursori kalon mbi butonin e filtrit */
+.filter-btn:hover {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    color: white; /* Teksti i bardhë */
+}
+
+/* Stili i butonit të filtrit aktiv */
+.filter-btn.active {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    color: white; /* Teksti i bardhë */
+}
+
+/* Struktura e galerisë me grid layout */
+.gallery-container {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Kolona që përshtaten automatikisht */
+    gap: 20px; /* Hapësira ndërmjet elementëve */
+    padding: 0 20px 50px; /* Hapësira e brendshme: 0 lart, 20px anash, 50px poshtë */
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i secilës karte në galeri */
+.gallery-item {
+    position: relative; /* Pozicionim relativ për elementët e brendshëm */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+    height: 250px; /* Lartësia fikse */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: transform 0.3s ease; /* Animacion i transformimit */
+}
+
+/* Efekti kur kursori kalon mbi elementin e galerisë */
+.gallery-item:hover {
+    transform: translateY(-5px); /* Ngritje e lehtë lart */
+}
+
+/* Stili i imazhit në elementin e galerisë */
+.gallery-item img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+    display: block; /* Shfaqet si bllok */
+    transition: transform 0.5s ease; /* Animacion i zmadhimit */
+}
+
+/* Efekti i zmadhimit të imazhit kur kursori kalon mbi të */
+.gallery-item:hover img {
+    transform: scale(1.1); /* Zmadhohet 10% */
+}
+
+/* Stili i miniaturave të videove */
+.video-thumbnail {
+    position: relative; /* Pozicionim relativ për ikonën e luajtjes */
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+}
+
+/* Ikona e luajtjes për videot */
+.play-icon {
+    position: absolute; /* Pozicionim absolut */
+    top: 50%; /* Në mes vertikalisht */
+    left: 50%; /* Në mes horizontalisht */
+    transform: translate(-50%, -50%); /* Qendërzim i saktë */
+    background-color: rgba(156, 45, 47, 0.8); /* Ngjyrë e kuqe gjysmë-transparente */
+    color: white; /* Teksti i bardhë */
+    width: 50px; /* Gjerësia fikse */
+    height: 50px; /* Lartësia fikse */
+    border-radius: 50%; /* Formë rrethore */
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    align-items: center; /* Qendërzim vertikal */
+    font-size: 1.2rem; /* Madhësia e fontit */
+    z-index: 2; /* Shtresa mbi imazhin */
+}
+
+/* Shtresa e informacionit që shfaqet kur kursori kalon mbi element */
+.item-overlay {
+    position: absolute; /* Pozicionim absolut */
+    bottom: 0; /* Në fund të elementit */
+    left: 0; /* Në të majtë */
+    right: 0; /* Në të djathtë */
+    background: rgba(0, 0, 0, 0.7); /* Sfond i zi gjysmë-transparent */
+    color: white; /* Teksti i bardhë */
+    padding: 15px; /* Hapësira e brendshme */
+    transform: translateY(100%); /* Fillimisht i fshehur poshtë elementit */
+    transition: transform 0.3s ease; /* Animacion i lëvizjes */
+    display: flex; /* Përdorim layout flex */
+    flex-direction: column; /* Elementët shfaqen vertikalisht */
+    gap: 5px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Shfaqja e shtresës së informacionit kur kursori kalon mbi element */
+.gallery-item:hover .item-overlay {
+    transform: translateY(0); /* Kthehet në pozicionin e duhur */
+}
+
+/* Stili i titullit në shtresën e informacionit */
+.item-overlay h3 {
+    margin: 0; /* Pa hapësirë të jashtme */
+    font-size: 1.1rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit në shtresën e informacionit */
+.item-overlay p {
+    margin: 0; /* Pa hapësirë të jashtme */
+    font-size: 0.9rem; /* Madhësia e fontit */
+    opacity: 0.8; /* Transparencë e lehtë */
+}
+
+/* Stili i butonit "Shiko" në shtresën e informacionit */
+.view-btn {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    border: none; /* Pa kufi */
+    color: white; /* Teksti i bardhë */
+    padding: 8px 12px; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-top: 10px; /* Hapësira sipër */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    font-size: 0.9rem; /* Madhësia e fontit */
+    transition: background-color 0.3s ease; /* Animacion i ndryshimit të ngjyrës */
+    align-self: flex-start; /* Vendosur në fillim të kontejnerit flex */
+}
+
+/* Efekti kur kursori kalon mbi butonin "Shiko" */
+.view-btn:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* Stilet e dritares modale (popup) */
+.modal {
+    display: none; /* Fillimisht e fshehur */
+    position: fixed; /* Pozicionim fiks në ekran */
+    top: 0; /* Në krye të dritares */
+    left: 0; /* Në të majtë të dritares */
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    background-color: rgba(0, 0, 0, 0.9); /* Sfond i zi pothuajse i plotë */
+    z-index: 1000; /* Vendosur mbi gjithçka tjetër */
+    overflow: auto; /* Mundëson lëvizjen vertikale nëse përmbajtja është e gjatë */
+    justify-content: center; /* Qendërzim horizontal */
+    align-items: center; /* Qendërzim vertikal */
+}
+
+/* Klasa për shfaqjen e modalit */
+.modal.active {
+    display: flex; /* Shfaqet me layout flex */
+}
+
+/* Butoni për mbylljen e modalit */
+.close-modal {
+    position: absolute; /* Pozicionim absolut */
+    top: 20px; /* Distanca nga lart */
+    right: 30px; /* Distanca nga e djathta */
+    color: white; /* Ngjyra e bardhë */
+    font-size: 35px; /* Madhësia e fontit */
+    font-weight: bold; /* Tekst i trashë */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    z-index: 1001; /* Mbi gjithçka tjetër në modal */
+}
+
+/* Përmbajtja e modalit */
+.modal-content {
+    position: relative; /* Pozicionim relativ */
+    background-color: rgba(0, 0, 0, 0.5); /* Sfond i zi gjysmë-transparent */
+    max-width: 90%; /* Gjerësia maksimale */
+    width: 800px; /* Gjerësia e preferuar */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    animation: zoomIn 0.3s ease; /* Animacion i shfaqjes */
+}
+
+/* Përcaktimi i animacionit të shfaqjes së modalit */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; } /* Fillon i vogël dhe transparent */
+    to { transform: scale(1); opacity: 1; } /* Përfundon në madhësinë normale dhe plotësisht i dukshëm */
+}
+
+/* Zona e medias (foto/video) në modal */
+.modal-media {
+    width: 100%; /* Gjerësia e plotë */
+    max-height: 70vh; /* Lartësia maksimale 70% e lartësisë së dritares */
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    align-items: center; /* Qendërzim vertikal */
+}
+
+/* Stili i imazhit në modal */
+.modal-media img {
+    max-width: 100%; /* Gjerësia maksimale */
+    max-height: 70vh; /* Lartësia maksimale */
+    object-fit: contain; /* Mbush hapësirën duke ruajtur proporcionin e plotë */
+}
+
+/* Stili i videos në modal */
+.modal-media video {
+    max-width: 100%; /* Gjerësia maksimale */
+    max-height: 70vh; /* Lartësia maksimale */
+}
+
+/* Zona e informacionit në modal */
+.modal-info {
+    padding: 20px; /* Hapësira e brendshme */
+    color: white; /* Teksti i bardhë */
+}
+
+/* Stili i titullit në modal */
+.modal-title {
+    margin: 0 0 10px; /* Hapësira poshtë */
+    font-size: 1.3rem; /* Madhësia e fontit */
+}
+
+/* Stili i përshkrimit në modal */
+.modal-description {
+    margin: 0; /* Pa hapësirë të jashtme */
+    font-size: 1rem; /* Madhësia e fontit */
+}
+
+/* Zona e navigimit në modal (butonat para/pas) */
+.modal-nav {
+    display: flex; /* Përdorim layout flex */
+    justify-content: space-between; /* Elementët shpërndahen në hapësirën e disponueshme */
+    padding: 0 20px 20px; /* Hapësira e brendshme: 0 lart, 20px anash dhe poshtë */
+}
+
+/* Stili i butonave të navigimit */
+.nav-btn {
+    background-color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    border: none; /* Pa kufi */
+    color: white; /* Teksti i bardhë */
+    width: 40px; /* Gjerësia fikse */
+    height: 40px; /* Lartësia fikse */
+    border-radius: 50%; /* Formë rrethore */
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    align-items: center; /* Qendërzim vertikal */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: background-color 0.3s ease; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonat e navigimit */
+.nav-btn:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* Përshtatjet për ekranet e mesme (tableta) */
+@media (max-width: 768px) {
+    /* Ndryshimi i strukturës së galerisë për ekrane të mesme */
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* Kolona më të vogla */
+    }
+    
+    /* Zvogëlimi i lartësisë së elementëve */
+    .gallery-item {
+        height: 200px; /* Lartësi më e vogël */
+    }
+    
+    /* Zvogëlimi i gjerësisë së modalit */
+    .modal-content {
+        width: 95%; /* Gjerësi më e madhe në përqindje */
+    }
+    
+    /* Zvogëlimi i lartësisë së zonës së medias */
+    .modal-media {
+        max-height: 60vh; /* Lartësi më e vogël */
+    }
+    
+    /* Zvogëlimi i lartësisë së imazhit/videos në modal */
+    .modal-media img,
+    .modal-media video {
+        max-height: 60vh; /* Lartësi më e vogël */
+    }
+    
+    /* Zvogëlimi i hapësirës në kokën e faqes */
+    .page-header {
+        padding: 30px 20px; /* Hapësirë më e vogël */
+    }
+    
+    /* Zvogëlimi i madhësisë së titullit */
+    .page-header h1 {
+        font-size: 1.8rem; /* Font më i vogël */
+    }
+}
+
+/* Përshtatjet për ekranet shumë të vogla (telefona) */
+@media (max-width: 480px) {
+    /* Ndryshimi i strukturës së galerisë për ekrane shumë të vogla */
+    .gallery-container {
+        grid-template-columns: 1fr; /* Vetëm një kolonë */
+        gap: 15px; /* Hapësirë më e vogël ndërmjet elementëve */
+    }
+    
+    /* Rritja e lartësisë së elementëve për ekrane të vogla */
+    .gallery-item {
+        height: 220px; /* Lartësi e përshtatshme për telefona */
+    }
+    
+    /* Zvogëlimi i butonave të filtrit */
+    .filter-btn {
+        padding: 8px 15px; /* Hapësirë më e vogël */
+        font-size: 0.9rem; /* Font më i vogël */
+    }
+    
+    /* Zvogëlimi i titullit në modal */
+    .modal-title {
+        font-size: 1.1rem; /* Font më i vogël */
+    }
+    
+    /* Zvogëlimi i përshkrimit në modal */
+    .modal-description {
+        font-size: 0.9rem; /* Font më i vogël */
+    }
+}

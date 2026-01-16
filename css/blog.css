@@ -1,0 +1,423 @@
+/* Përcaktimi i variablave globale të ngjyrave dhe vlerave të përdorura në faqe */
+:root {
+    --main-color: #9C2D2F; /* Ngjyra kryesore - e kuqe e errët */
+    --light-color: #f8e5e5; /* Ngjyra e lehtë - rozë shumë e zbehtë */
+    --dark-color: #7a2325; /* Ngjyra e errët - e kuqe më e thellë */
+    --text-color: #333; /* Ngjyra e tekstit - gri e errët */
+    --bg-color: #fff; /* Ngjyra e sfondit - e bardhë */
+}
+
+/* Resetimi i vlerave fillestare për të gjithë elementët */
+* {
+    margin: 0; /* Heq hapësirën e jashtme */
+    padding: 0; /* Heq hapësirën e brendshme */
+    box-sizing: border-box; /* Përfshin padding dhe border në gjerësinë dhe lartësinë e elementëve */
+}
+
+/* Stilizimi i elementit body */
+body {
+    background-color: #f5f5f5; /* Ngjyra e sfondit - gri shumë e lehtë */
+    color: var(--text-color); /* Ngjyra e tekstit - përdor variablën e përcaktuar */
+    line-height: 1.6; /* Lartësia e rreshtit - për lexueshmëri më të mirë */
+}
+
+/* Stilizimi i kokës së faqes */
+header {
+    background-color: var(--main-color); /* Ngjyra e sfondit - e kuqe */
+    color: white; /* Ngjyra e tekstit - e bardhë */
+    text-align: center; /* Qendërzimi i tekstit */
+    padding: 2rem 0; /* Hapësira e brendshme - 2rem lart/poshtë, 0 majtas/djathtas */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hije e lehtë në fund të header-it */
+}
+
+/* Stilizimi i titullit kryesor */
+h1 {
+    font-size: 2.5rem; /* Madhësia e fontit */
+    margin-bottom: 0.5rem; /* Hapësira poshtë titullit */
+}
+
+/* Kontejneri kryesor që mban përmbajtjen e faqes */
+.container {
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 2rem auto; /* Qendërzimi horizontal me hapësirë 2rem lart/poshtë */
+    padding: 0 1rem; /* Hapësira e brendshme vetëm anash */
+}
+
+/* Kontejneri i përmbajtjes së blogut me layout flex */
+.blog-container {
+    display: flex; /* Përdorim layout flex */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    gap: 2rem; /* Hapësira ndërmjet elementëve */
+}
+
+/* Zona kryesore e përmbajtjes së blogut */
+.blog-main {
+    flex: 3; /* Zë hapësirën 3 herë më të madhe se sidebar */
+    min-width: 300px; /* Gjerësia minimale */
+}
+
+/* Sidebar i blogut - zonat anësore */
+.blog-sidebar {
+    flex: 1; /* Zë hapësirën më të vogël krahasuar me blog-main */
+    min-width: 250px; /* Gjerësia minimale */
+}
+
+/* Kontejneri i kutisë së kërkimit */
+.search-container {
+    margin-bottom: 2rem; /* Hapësira poshtë */
+    display: flex; /* Përdorim layout flex */
+    gap: 0.5rem; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i inputit të kërkimit */
+.search-container input {
+    flex: 1; /* Zë hapësirën e disponueshme */
+    padding: 0.75rem; /* Hapësira e brendshme */
+    border: 1px solid #ddd; /* Kufi i hollë gri */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    font-size: 1rem; /* Madhësia e fontit */
+}
+
+/* Stili i butonit të kërkimit */
+.search-container button {
+    background-color: var(--main-color); /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border: none; /* Pa kufi */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    padding: 0.75rem 1.5rem; /* Hapësira e brendshme */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Stili i butonit të kërkimit kur kursori kalon mbi të */
+.search-container button:hover {
+    background-color: var(--dark-color); /* Ngjyrë e kuqe më e errët */
+}
+
+/* Kontejneri i filtrave të kërkimit */
+.filters {
+    background: white; /* Sfond i bardhë */
+    padding: 1.5rem; /* Hapësira e brendshme */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+    margin-bottom: 2rem; /* Hapësira poshtë */
+}
+
+/* Stili i titullit të filtrave */
+.filters h3 {
+    margin-bottom: 1rem; /* Hapësira poshtë */
+    color: var(--main-color); /* Ngjyra e kuqe */
+    border-bottom: 2px solid var(--light-color); /* Vijë rozë në fund */
+    padding-bottom: 0.5rem; /* Hapësira e brendshme poshtë */
+}
+
+/* Stili i opsioneve të filtrave */
+.filter-option {
+    margin: 0.75rem 0; /* Hapësira lart/poshtë */
+    display: block; /* Shfaqet si bllok */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+}
+
+/* Stili i checkbox-ave në filtrat */
+.filter-option input {
+    margin-right: 0.5rem; /* Hapësira djathtas */
+}
+
+/* Kontejneri i postimeve me grid layout */
+.posts {
+    display: grid; /* Përdorim layout grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Kolona që përshtaten automatikisht */
+    gap: 2rem; /* Hapësira ndërmjet postimeve */
+}
+
+/* Stili i secilës karte të postimit */
+.post {
+    background: white; /* Sfond i bardhë */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+    transition: transform 0.3s; /* Animacion i transformimit */
+}
+
+/* Efekti kur kursori kalon mbi postimin */
+.post:hover {
+    transform: translateY(-5px); /* Ngritje e lehtë lart */
+}
+
+/* Stili i imazheve në postime */
+.post-img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 180px; /* Lartësia fikse */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+}
+
+/* Zona e përmbajtjes së postimit */
+.post-content {
+    padding: 1.5rem; /* Hapësira e brendshme */
+}
+
+/* Stili i titullit të postimit */
+.post-title {
+    font-size: 1.5rem; /* Madhësia e fontit */
+    margin-bottom: 0.5rem; /* Hapësira poshtë */
+    color: var(--main-color); /* Ngjyra e kuqe */
+}
+
+/* Stili i datës së postimit */
+.post-date {
+    font-size: 0.85rem; /* Madhësia e fontit */
+    color: #777; /* Ngjyra gri */
+    margin-bottom: 1rem; /* Hapësira poshtë */
+}
+
+/* Stili i përmbledhjes së postimit */
+.post-excerpt {
+    margin-bottom: 1.5rem; /* Hapësira poshtë */
+}
+
+/* Stili i butonit "Lexo më shumë" */
+.read-more {
+    display: inline-block; /* Shfaqet si bllok në linjë */
+    background-color: var(--main-color); /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    padding: 0.5rem 1rem; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    text-decoration: none; /* Pa nënvizim */
+    transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+}
+
+/* Stili i butonit "Lexo më shumë" kur kursori kalon mbi të */
+.read-more:hover {
+    background-color: var(--dark-color); /* Ngjyrë e kuqe më e errët */
+}
+
+/* Stili i paginimit në fund të listës së postimeve */
+.pagination {
+    display: flex; /* Përdorim layout flex */
+    justify-content: center; /* Qendërzim horizontal */
+    margin-top: 2rem; /* Hapësira sipër */
+    gap: 0.5rem; /* Hapësira ndërmjet numerave të faqeve */
+}
+
+/* Stili i linkut të faqes në paginim */
+.page-link {
+    display: block; /* Shfaqet si bllok */
+    width: 40px; /* Gjerësia fikse */
+    height: 40px; /* Lartësia fikse */
+    display: flex; /* Përdorim layout flex brenda */
+    align-items: center; /* Qendërzim vertikal */
+    justify-content: center; /* Qendërzim horizontal */
+    background: white; /* Sfond i bardhë */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    border: 1px solid #ddd; /* Kufi i hollë gri */
+    text-decoration: none; /* Pa nënvizim */
+    color: var(--text-color); /* Ngjyra e zakonshme e tekstit */
+    transition: all 0.3s; /* Animacion për të gjitha vetitë */
+}
+
+/* Stili i linkut të faqes aktive ose kur kursori kalon mbi të */
+.page-link:hover, .page-link.active {
+    background-color: var(--main-color); /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border-color: var(--main-color); /* Kufi i kuq */
+}
+
+/* Kontejneri për seksionet në fund të faqes */
+.bottom-sections {
+    display: flex; /* Përdorim layout flex */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    gap: 1rem; /* Hapësira ndërmjet seksioneve */
+    margin-top: 0.5rem; /* Hapësira sipër */
+}
+
+/* Stili i përbashkët për postime popullore dhe formën e abonimit */
+.popular-posts, .subscribe {
+    flex: 1; /* Zënë hapësirë të barabartë */
+    min-width: 300px; /* Gjerësia minimale */
+    background: white; /* Sfond i bardhë */
+    padding: 1.5rem; /* Hapësira e brendshme */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+}
+
+/* Stili i titullit të seksioneve në fund */
+.section-title {
+    margin-bottom: 1.5rem; /* Hapësira poshtë */
+    color: var(--main-color); /* Ngjyra e kuqe */
+    border-bottom: 2px solid var(--light-color); /* Vijë rozë në fund */
+    padding-bottom: 0.5rem; /* Hapësira e brendshme poshtë */
+}
+
+/* Stili i secilit postim në seksionin e postimeve popullore */
+.popular-post {
+    display: flex; /* Përdorim layout flex */
+    margin-bottom: 1rem; /* Hapësira poshtë */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    padding: 0.5rem; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi postimin popullor */
+.popular-post:hover {
+    background-color: var(--light-color); /* Sfond rozë i lehtë */
+}
+
+/* Stili i imazhit të postimit popullor */
+.popular-post img {
+    width: 60px; /* Gjerësia fikse */
+    height: 60px; /* Lartësia fikse */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-right: 1rem; /* Hapësira djathtas */
+}
+
+/* Stili i titullit të postimit popullor */
+.popular-post-content h4 {
+    font-size: 1rem; /* Madhësia e fontit */
+    margin-bottom: 0.25rem; /* Hapësira poshtë */
+}
+
+/* Stili i tekstit të postimit popullor */
+.popular-post-content p {
+    font-size: 0.85rem; /* Madhësia e fontit */
+    color: #777; /* Ngjyra gri */
+}
+
+/* Stili i inputit në formën e abonimit */
+.subscribe input {
+    width: 100%; /* Gjerësia e plotë */
+    padding: 0.75rem; /* Hapësira e brendshme */
+    margin-bottom: 1rem; /* Hapësira poshtë */
+    border: 1px solid #ddd; /* Kufi i hollë gri */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+}
+
+/* Stili i butonit në formën e abonimit */
+.subscribe button {
+    width: 100%; /* Gjerësia e plotë */
+    background-color: var(--main-color); /* Ngjyra e kuqe e sfondit */
+    color: white; /* Teksti i bardhë */
+    border: none; /* Pa kufi */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    padding: 0.75rem; /* Hapësira e brendshme */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin e abonimit */
+.subscribe button:hover {
+    background-color: var(--dark-color); /* Ngjyrë e kuqe më e errët */
+}
+
+/* Stili i dritares modale (popup) */
+.modal {
+    display: none; /* Fillimisht e fshehur */
+    position: fixed; /* Pozicionim fiks në ekran */
+    z-index: 1000; /* Vendosur mbi gjithçka tjetër */
+    left: 0; /* Pozicionim nga e majta */
+    top: 0; /* Pozicionim nga lart */
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    background-color: rgba(0, 0, 0, 0.7); /* Sfond i errët gjysmë-transparent */
+    overflow: auto; /* Mundëson lëvizjen vertikale nëse përmbajtja është e gjatë */
+}
+
+/* Stili i përmbajtjes së dritares modale */
+.modal-content {
+    position: relative; /* Pozicionim relativ */
+    background-color: white; /* Sfond i bardhë */
+    margin: 5% auto; /* 5% nga lart, qendërzuar horizontalisht */
+    padding: 2rem; /* Hapësira e brendshme */
+    width: 80%; /* Gjerësia 80% e dritares */
+    max-width: 800px; /* Gjerësia maksimale */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hije më e theksuar */
+    animation: modalFadeIn 0.3s; /* Animacion i shfaqjes */
+}
+
+/* Përcaktimi i animacionit për shfaqjen e modalit */
+@keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-50px);} /* Fillon transparent dhe 50px sipër */
+    to {opacity: 1; transform: translateY(0);} /* Përfundon plotësisht i dukshëm në pozicionin e duhur */
+}
+
+/* Stili i butonit për mbylljen e modalit */
+.close-modal {
+    position: absolute; /* Pozicionim absolut */
+    top: 1rem; /* Distanca nga lart */
+    right: 1.5rem; /* Distanca nga e djathta */
+    font-size: 2rem; /* Madhësia e fontit */
+    color: #777; /* Ngjyra gri */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    transition: color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin e mbylljes */
+.close-modal:hover {
+    color: var(--main-color); /* Ngjyra e kuqe */
+}
+
+/* Stili i titullit në dritaren modale */
+.modal-title {
+    font-size: 2rem; /* Madhësia e fontit */
+    margin-bottom: 1rem; /* Hapësira poshtë */
+    color: var(--main-color); /* Ngjyra e kuqe */
+}
+
+/* Stili i datës në dritaren modale */
+.modal-date {
+    font-size: 0.9rem; /* Madhësia e fontit */
+    color: #777; /* Ngjyra gri */
+    margin-bottom: 1.5rem; /* Hapësira poshtë */
+}
+
+/* Stili i imazhit në dritaren modale */
+.modal-img {
+    width: 100%; /* Gjerësia e plotë */
+    height: 300px; /* Lartësia fikse */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+    border-radius: 8px; /* Këndet e rrumbullakosura */
+    margin-bottom: 1.5rem; /* Hapësira poshtë */
+}
+
+/* Stili i mesazhit të suksesit */
+.success-message {
+    display: none; /* Fillimisht i fshehur */
+    background-color: #dff0d8; /* Sfond i gjelbër i lehtë */
+    color: #3c763d; /* Tekst i gjelbër i errët */
+    padding: 1rem; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-top: 1rem; /* Hapësira sipër */
+    text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Stili i mesazhit të gabimit */
+.error-message {
+    display: none; /* Fillimisht i fshehur */
+    background-color: #f2dede; /* Sfond i kuq i lehtë */
+    color: #a94442; /* Tekst i kuq i errët */
+    padding: 1rem; /* Hapësira e brendshme */
+    border-radius: 4px; /* Këndet e rrumbullakosura */
+    margin-top: 1rem; /* Hapësira sipër */
+    text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Përshtatjet për pajisjet mobile */
+@media (max-width: 768px) {
+    /* Ndryshimi i layout-it të postimeve për ekrane të vogla */
+    .posts {
+        grid-template-columns: 1fr; /* Vetëm një kolonë */
+    }
+    
+    /* Ndryshimi i layout-it të kontejnerit të blogut për ekrane të vogla */
+    .blog-container {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+    
+    /* Ndryshimi i layout-it të seksioneve të poshtme për ekrane të vogla */
+    .bottom-sections {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+}

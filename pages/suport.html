@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lidhja me CSS-të e nevojshme, fontet dhe ikonat -->
+  <title>Suport - Kori Mrekullia</title>
+  <link rel="stylesheet" href="../css/suport.css" />
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigimi i faqes me menunë kryesore dhe nënmenutë dropdown -->
+    <nav class="navbar">
+        <div class="logo">
+          <img src="../asete/foto/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+          <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+          <li class="dropdown">
+            <a>Aktivitete</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/koncerte.html">Koncertet</a></li>
+              <li><a href="/pages/kalendari.html">Kalendari</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+          <li><a href="/pages/galeria.html" class="active">Galeria</a></li>
+          <li><a href="/pages/suport.html">Suport</a></li>
+          <li class="dropdown">
+            <a>Informacione</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav> 
+      
+      
+  <!-- Titulli kryesor i faqes me thirrje për mbështetje -->
+  <header class="hero">
+    <h1 class="hero-text smaller-text">Mb&euml;shtet Korin 'Mrekullia' – B&euml;hu pjes&euml; e rrug&euml;timit ton&euml;!</h1>
+  </header>
+
+  <!-- Seksioni i mënyrave të mbështetjes me kartat e opsioneve -->
+  <section class="section">
+    <h2>Si mund t&euml; na ndihmoni?</h2>
+    <div class="options">
+      <div class="card">
+        <h3><i class="fas fa-credit-card"></i> Dhuro</h3>
+        <p>Na ndihmo financiarisht p&euml;r t&euml; p&euml;rmir&euml;suar aktivitetet tona dhe p&euml;r t&euml; ofruar m&euml; shum&euml; mund&euml;si p&euml;r talentet e reja.</p>
+        <button class="donate-btn" onclick="openForm('donacion')">Dhuro Tani</button>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-handshake"></i> Sponsorizo</h3>
+        <p>Sponsorizoni eventet tona si kompani ose individ. B&euml;huni partner i suksesit ton&euml; dhe promovoni emrin tuaj.</p>
+        <button class="donate-btn" onclick="openForm('sponsorizim')">B&euml;hu Sponsor</button>
+      </div>
+      <div class="card">
+        <h3><i class="fas fa-gift"></i> Pajisje / Kostume</h3>
+        <p>Dhuro instrumente muzikore, pajisje audio ose veshje koncertesh p&euml;r t&euml; ndihmuar performanc&euml;n ton&euml;.</p>
+        <button class="donate-btn" onclick="openForm('pajisje')">Dhuro Pajisje</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seksioni i arsyeve për mbështetje -->
+  <section class="why-support">
+    <h3>Pse t&euml; na mb&euml;shtesni?</h3>
+    <p>
+      Kori Mrekullia &euml;sht&euml; nj&euml; hap&euml;sir&euml; ku f&euml;mij&euml;t shprehin talentin dhe zhvillohen p&euml;rmes muzik&euml;s. Mb&euml;shtetja juaj na ndihmon t&euml; krijojm&euml; kujtime t&euml; paharrueshme, t&euml; organizojm&euml; koncerte m&euml; t&euml; mira dhe t&euml; investojm&euml; n&euml; t&euml; ardhmen e k&euml;tyre talenteve t&euml; reja.
+    </p>
+  </section>
+
+  <!-- Seksioni i partnerëve dhe sponsorëve -->
+  <section class="sponsors">
+    <h3 style="width: 100%; text-align: center; margin-bottom: 1.5rem; color: #d02a2a;">Partner&euml;t tan&euml;</h3>
+    <img src="../asete/foto/logo-bashkia.png" alt="Sponsor 1" />
+    <img src="../asete/foto/abc.png" alt="Sponsor 2" />
+    <img src="../asete/foto/report.jpg" alt="Sponsor 3" />
+    <img src="../asete/foto/tvklan.jpg" alt="Sponsor 4" />
+    <img src="../asete/foto/topch.png" alt="Sponsor 5" />
+    <img src="../asete/foto/tv.jpg" alt="Sponsor 6" />
+  </section>
+
+  <!-- Shtresa transparente që mbulon faqen kur hapet formulari -->
+  <div class="overlay" id="overlay" onclick="closeForm()"></div>
+
+  <!-- Formulari popup për mbështetje me validim -->
+  <div class="popup-form" id="popupForm">
+    <h2>Formular Mb&euml;shtetje</h2>
+    <form id="supportForm">
+      <input type="text" name="emri" placeholder="Emri" required minlength="2" />
+      <input type="text" name="mbiemri" placeholder="Mbiemri" required minlength="2" />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="telefoni" placeholder="Nr. Telefoni" pattern="[0-9]{9,12}" required />
+      <select name="lloji" id="formTypeSelect" required>
+        <option value="">Zgjidh m&euml;nyr&euml;n e suportit</option>
+        <option value="donacion">Donacion</option>
+        <option value="sponsorizim">Sponsorizim</option>
+        <option value="pajisje">Pajisje / Kostume</option>
+      </select>
+      <textarea name="mesazhi" rows="4" placeholder="Mesazhi juaj..." required minlength="10"></textarea>
+      <button type="submit">D&euml;rgo Formularin</button>
+    </form>
+  </div>
+
+  <!-- Mesazhi i suksesit pas dërgimit të formularit -->
+  <div class="success-popup" id="successPopup">
+    <i class="fas fa-check-circle" style="font-size: 3rem; color: #d02a2a; margin-bottom: 1rem;"></i>
+    <p>Formulari u plot&euml;sua me sukses! Kontrolloni email-in tuaj p&euml;r konfirmim.</p>
+    <button onclick="closeSuccess()">Mbyll</button>
+  </div>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Lidhja me librari dhe skripte JavaScript -->
+  <!-- EmailJS Library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- Custom JavaScript -->
+  <script src="../js/suport.js"></script>
+  <script src="../js/index.js"></script>
+</body>
+</html>

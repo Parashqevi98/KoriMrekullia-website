@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lidhja me CSS bazë, CSS specifike dhe Font Awesome për ikonat -->
+  <title>FAQ - Kori Mrekullia</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/faq.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigimi i faqes me menu dhe nënmenu dropdown -->
+    <nav class="navbar">
+        <div class="logo">
+          <img src="../asete/foto/logo.png" alt="Logo">
+        </div>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+          <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+          <li class="dropdown">
+            <a>Aktivitete</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/koncerte.html">Koncertet</a></li>
+              <li><a href="/pages/kalendari.html">Kalendari</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+          <li><a href="/pages/galeria.html" class="active">Galeria</a></li>
+          <li><a href="/pages/suport.html">Suport</a></li>
+          <li class="dropdown">
+            <a>Informacione</a>
+            <ul class="dropdown-content">
+              <li><a href="/pages/blog.html">Blog</a></li>
+              <li><a href="/pages/faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li><a href="/pages/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav> 
+
+  <!-- Titulli kryesor i faqes me ikonë -->
+  <header>
+    <h1><i class="fas fa-question-circle"></i> Pyetje t&euml; Shpeshta (FAQ)</h1>
+  </header>
+
+  <main>
+    <!-- Seksioni hyrës me ikonë dhe përshkrim -->
+    <div class="intro-section">
+      <div class="intro-icon">
+        <img src="../asete/foto/faq.webp" alt="Kori Mrekullia" class="intro-image">
+      </div>
+      <div class="intro-text">
+        <h2>Mir&euml; se vini n&euml; FAQ</h2>
+        <p>Kjo faqe sh&euml;rben p&euml;r t'ju ndihmuar t&euml; gjeni p&euml;rgjigje p&euml;r pyetjet m&euml; t&euml; shpeshta n&euml; lidhje me Korin "Mrekullia". K&euml;tu mund t&euml; gjeni informacione p&euml;r regjistrimin, oraret e provave, dhe m&euml;nyrat se si mund t&euml; kontribuoni. N&euml;se nuk gjeni p&euml;rgjigjen q&euml; k&euml;rkoni, ju lutemi na d&euml;rgoni pyetjen tuaj duke p&euml;rdorur formularin n&euml; t&euml; djatht&euml;.</p>
+      </div>
+    </div>
+
+    <!-- Kutia e kërkimit për pyetje specifike -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="K&euml;rko nj&euml; pyetje...">
+    </div>
+
+    <div class="faq-container">
+      <!-- Seksioni i pyetjeve dhe përgjigjeve me mundësi zgjerimi -->
+      <div class="faq-section">
+        <!-- Elementët e akordionit për pyetjet e shpeshta -->
+        <div class="faq">
+          <div class="faq-question"><span>Si mund t&euml; regjistrohem p&euml;r t&euml; qen&euml; pjes&euml; e korit?</span><i class="fas fa-chevron-down faq-icon"></i></div>
+          <div class="faq-answer">Mund t&euml; regjistroheni duke plot&euml;suar formularin n&euml; faqen "Behu Pjese" ose duke kontaktuar administrat&euml;n p&euml;rmes faqes "Kontaktet".</div>
+        </div>
+        <div class="faq">
+          <div class="faq-question"><span>Kur zhvillohen provat e korit?</span><i class="fas fa-chevron-down faq-icon"></i></div>
+          <div class="faq-answer">Provat zhvillohen çdo t&euml; shtun&euml; n&euml; or&euml;n 10:30 dhe n&euml; or&euml;n 12:30 n&euml; Qendr&euml;n Kulturore t&euml; F&euml;mij&euml;ve.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-question"><span>A ka ndonj&euml; pages&euml; p&euml;r t&euml; qen&euml; pjes&euml; e korit?</span><i class="fas fa-chevron-down faq-icon"></i></div>
+          <div class="faq-answer">Jo, pjes&euml;marrja n&euml; "Kori Mrekullia" &euml;sht&euml; falas p&euml;r t&euml; gjith&euml; f&euml;mij&euml;t.</div>
+        </div>
+        <div class="faq">
+          <div class="faq-question"><span>Si mund t&euml; kontribuoj si prind apo vullnetar?</span><i class="fas fa-chevron-down faq-icon"></i></div>
+          <div class="faq-answer">Mund t&euml; kontribuoni duke u regjistruar si vullnetar n&euml; faqen "B&euml;hu Pjes&euml;" ose duke na kontaktuar direkt.</div>
+        </div>
+      </div>
+
+      <!-- Butonat për udhëzuesin dhe dërgimin e pyetjeve të reja -->
+      <div class="faq-actions">
+        <button onclick="showGuide()"> Udh&euml;zues p&euml;r prind&euml;rit</button>
+        <button onclick="toggleForm()">D&euml;rgo nj&euml; pyetje</button>
+        <div class="faq-form" id="faqForm">
+          <textarea id="questionInput" placeholder="Shkruani pyetjen tuaj k&euml;tu..."></textarea>
+          <button onclick="sendQuestion(event)">D&euml;rgo</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Dritarja modale për udhëzuesin e prindërve -->
+  <div class="popup" id="parentGuide">
+    <h3>Udh&euml;zues p&euml;r Prind&euml;rit</h3>
+    <p>Ky &euml;sht&euml; nj&euml; udh&euml;zues i shkurt&euml;r p&euml;r t&euml; ndihmuar prind&euml;rit t&euml; kuptojn&euml; m&euml; mir&euml; angazhimin e f&euml;mij&euml;ve n&euml; korin ton&euml;. Siguroni q&euml; f&euml;mij&euml;t t&euml; vijn&euml; n&euml; prova n&euml; koh&euml;, t&euml; ken&euml; uj&euml; me vete dhe t&euml; njoftoni n&euml; rast mungese.</p>
+    <button class="popup-close" onclick="closeGuide()">Mbyll</button>
+  </div>
+
+  <!-- Dritarja modale për konfirmimin e dërgimit të pyetjes -->
+  <div class="popup-success" id="successPopup">
+    <h3>✅ Pyetja u d&euml;rgua me sukses!</h3>
+    <button class="popup-close" onclick="closeSuccess()">OK</button>
+  </div>
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lidhja me skripta JavaScript për funksionalitetin e faqes -->
+  <script src="../js/index.js"></script>
+  <script src="../js/faq.js"></script>
+
+</body>
+</html>

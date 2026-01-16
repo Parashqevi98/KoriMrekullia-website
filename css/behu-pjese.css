@@ -1,0 +1,416 @@
+/* Stilet specifike për seksionin Behu pjese */
+
+/* Header i faqes - zona kryesore në krye të faqes */
+.page-header {
+    background-color: #9C2D2F; /* Ngjyra e sfondit e kuqe e errët */
+    color: white; /* Ngjyra e tekstit e bardhë */
+    text-align: center; /* Teksti i qendërzuar */
+    padding: 60px 20px; /* Hapësira e brendshme: 60px lart/poshtë, 20px majtas/djathtas */
+    margin-bottom: 0; /* Pa hapësirë poshtë */
+}
+
+/* Stili i titullit kryesor në header */
+.page-header h1 {
+    font-size: 2.5rem; /* Madhësia e fontit */
+    margin: 0; /* Pa hapësirë të jashtme */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Hije e lehtë për tekst */
+}
+
+/* Kontejneri kryesor për formularin e regjistrimit dhe informacionin */
+.registration-container {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%); /* Gradient i sfondit nga gri i lehtë në gri më të errët */
+    padding: 50px 20px; /* Hapësira e brendshme */
+    display: flex; /* Përdorim layout flex */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    justify-content: space-between; /* Elementët shpërndahen me hapësirë ndërmjet tyre */
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+    gap: 30px; /* Hapësira ndërmjet elementëve */
+}
+
+/* Zona me informacion për regjistrimin */
+.registration-info {
+    flex: 1; /* Zë hapësirën e disponueshme në mënyrë të barabartë */
+    min-width: 300px; /* Gjerësia minimale */
+}
+
+/* Stili i titullit në zonën e informacionit */
+.registration-info h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    font-size: 1.5rem; /* Madhësia e fontit */
+}
+
+/* Stili i paragrafit në zonën e informacionit */
+.registration-info p {
+    margin-bottom: 30px; /* Hapësira poshtë */
+    line-height: 1.6; /* Lartësia e rreshtit */
+    color: #333; /* Ngjyra e tekstit gri e errët */
+}
+
+/* Kontejneri për imazhin e regjistrimit */
+.registration-image {
+    margin-top: 30px; /* Hapësira sipër */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    overflow: hidden; /* Fsheh çdo gjë që del jashtë kufijve */
+    max-height: 300px; /* Lartësia maksimale */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Hije rreth imazhit */
+}
+
+/* Stili i imazhit brenda kontejnerit */
+.registration-image img {
+    width: 100%; /* Gjerësia 100% e kontejnerit */
+    height: auto; /* Lartësia automatike për të ruajtur proporcionin */
+    display: block; /* Shfaqet si bllok */
+    object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+}
+
+/* Stili i formularit të regjistrimit */
+.registration-form {
+    flex: 1; /* Zë hapësirën e disponueshme në mënyrë të barabartë */
+    min-width: 300px; /* Gjerësia minimale */
+    background-color: #ffffff; /* Sfond i bardhë */
+    padding: 30px; /* Hapësira e brendshme */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Hije rreth formularit */
+    border-top: 4px solid #9C2D2F; /* Vijë e kuqe në krye */
+}
+
+/* Stili i titullit në formular */
+.registration-form h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe e errët */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Seksionet e formularit */
+.form-section {
+    margin-bottom: 30px; /* Hapësira poshtë */
+    border-bottom: 1px solid #eee; /* Vijë ndarëse në fund */
+    padding-bottom: 20px; /* Hapësira e brendshme poshtë */
+}
+
+/* Titujt e seksioneve të formularit */
+.form-section h3 {
+    font-size: 1.2rem; /* Madhësia e fontit */
+    margin-bottom: 15px; /* Hapësira poshtë */
+    color: #333; /* Ngjyra e tekstit */
+}
+
+/* Grupi i fushave në formular */
+.form-group {
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stili i etiketave në formular */
+.form-group label {
+    display: block; /* Shfaqet si bllok */
+    margin-bottom: 5px; /* Hapësira poshtë */
+    font-weight: 500; /* Trashësia e fontit */
+    color: #444; /* Ngjyra e tekstit */
+}
+
+/* Stili i inputeve, dropdown-eve dhe zonave të tekstit */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%; /* Gjerësia e plotë */
+    padding: 10px; /* Hapësira e brendshme */
+    border: 1px solid #ddd; /* Kufi i hollë gri */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    font-size: 0.95rem; /* Madhësia e fontit */
+    transition: border-color 0.3s ease; /* Animacion i ndryshimit të ngjyrës së kufirit */
+}
+
+/* Stili kur fushat janë në fokus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #9C2D2F; /* Kufi me ngjyrë të kuqe */
+    outline: none; /* Hiq konturin default */
+    box-shadow: 0 0 5px rgba(156, 45, 47, 0.2); /* Hije e lehtë rreth fushës */
+}
+
+/* Stili për zonën e tekstit */
+.form-group textarea {
+    resize: vertical; /* Lejon vetëm ndryshimin vertikal të madhësisë */
+    min-height: 80px; /* Lartësia minimale */
+}
+
+/* Stili për shënimin e fushave të detyrueshme */
+.required {
+    color: #9C2D2F; /* Ngjyra e kuqe për të treguar fushat e detyrueshme */
+}
+
+/* Kontejneri për grupin e checkbox-ave */
+.checkbox-group {
+    margin-top: 15px; /* Hapësira sipër */
+}
+
+/* Kontejneri i opsioneve të checkbox-ave */
+.checkbox-options {
+    margin-top: 10px; /* Hapësira sipër */
+}
+
+/* Stili për çdo opsion checkbox */
+.checkbox-option {
+    margin-bottom: 10px; /* Hapësira poshtë */
+    display: flex; /* Përdorim layout flex */
+    align-items: center; /* Rreshtim vertikal në qendër */
+}
+
+/* Stili për inputet radio dhe checkbox */
+.checkbox-option input[type="radio"],
+.checkbox-option input[type="checkbox"] {
+    width: auto; /* Gjerësia automatike */
+    margin-right: 10px; /* Hapësira djathtas */
+}
+
+/* Zona e butonit të dërgimit */
+.form-submit {
+    margin-top: 30px; /* Hapësira sipër */
+    text-align: center; /* Qendërzim horizontal */
+}
+
+/* Stili i butonit të dërgimit */
+.submit-btn {
+    background-color: #9C2D2F; /* Ngjyra e sfondit e kuqe */
+    color: white; /* Ngjyra e tekstit e bardhë */
+    border: none; /* Pa kufi */
+    padding: 12px 30px; /* Hapësira e brendshme */
+    font-size: 1rem; /* Madhësia e fontit */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    cursor: pointer; /* Kursori shfaqet si dorë kur kalon mbi buton */
+    transition: all 0.3s ease; /* Animacion për të gjitha ndryshimet */
+    font-weight: 600; /* Trashësia e fontit */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Hije e lehtë */
+}
+
+/* Stili i butonit kur kursori kalon mbi të */
+.submit-btn:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+    transform: translateY(-2px); /* Ngritje e lehtë lart */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Hije më e theksuar */
+}
+
+/* Stili i butonit kur është i çaktivizuar */
+.submit-btn:disabled {
+    background-color: #cccccc; /* Ngjyrë gri */
+    cursor: not-allowed; /* Kursori tregon që nuk është i disponueshëm */
+    transform: none; /* Pa efekt transformimi */
+    box-shadow: none; /* Pa hije */
+}
+
+/* Stili i mesazhit të gabimit */
+.error-message {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    font-size: 0.85rem; /* Madhësia e fontit */
+    margin-top: 5px; /* Hapësira sipër */
+    display: block; /* Shfaqet si bllok */
+}
+
+/* Stili i mesazhit të suksesit */
+.success-message {
+    background-color: #e6f7e6; /* Sfond i gjelbër i lehtë */
+    color: #2e7d32; /* Tekst i gjelbër i errët */
+    padding: 15px; /* Hapësira e brendshme */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    text-align: center; /* Tekst i qendërzuar */
+    display: none; /* Fillimisht i fshehur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+}
+
+/* Stili i mesazhit global të gabimit */
+.error-message-global {
+    background-color: #ffebee; /* Sfond i kuq i lehtë */
+    color: #c62828; /* Tekst i kuq i errët */
+    padding: 15px; /* Hapësira e brendshme */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    margin-bottom: 20px; /* Hapësira poshtë */
+    text-align: center; /* Tekst i qendërzuar */
+    display: none; /* Fillimisht i fshehur */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+}
+
+/* Seksioni "Pse të bashkohesh" */
+.why-join {
+    padding: 60px 20px; /* Hapësira e brendshme */
+    background: linear-gradient(135deg, #f8f8f8 0%, #eeeeee 100%); /* Gradient i sfondit */
+    text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Stili i titullit në seksionin "Pse të bashkohesh" */
+.why-join h2 {
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 30px; /* Hapësira poshtë */
+    position: relative; /* Pozicionim relativ për elementin pseudo */
+    display: inline-block; /* Shfaqet si bllok në linjë */
+    padding-bottom: 10px; /* Hapësira e brendshme poshtë */
+}
+
+/* Vijë dekorative nën titull */
+.why-join h2:after {
+    content: ""; /* Përmbajtje e zbrazët */
+    position: absolute; /* Pozicionim absolut */
+    left: 25%; /* Pozicionim nga e majta */
+    bottom: 0; /* Në fund të elementit */
+    width: 50%; /* Gjerësia 50% */
+    height: 3px; /* Lartësia 3px */
+    background-color: #9C2D2F; /* Ngjyra e kuqe */
+}
+
+/* Kontejneri i përfitimeve */
+.benefits-container {
+    display: flex; /* Përdorim layout flex */
+    flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+    justify-content: center; /* Qendërzim horizontal */
+    gap: 25px; /* Hapësira ndërmjet elementëve */
+    max-width: 1200px; /* Gjerësia maksimale */
+    margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i kartave të përfitimeve */
+.benefit-card {
+    background-color: white; /* Sfond i bardhë */
+    border-radius: 10px; /* Këndet e rrumbullakosura */
+    padding: 25px; /* Hapësira e brendshme */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Hije */
+    width: 250px; /* Gjerësia fikse */
+    text-align: center; /* Tekst i qendërzuar */
+    transition: all 0.3s ease; /* Animacion */
+    border-bottom: 3px solid transparent; /* Kufi transparent në fund */
+}
+
+/* Efekti kur kursori kalon mbi kartën */
+.benefit-card:hover {
+    transform: translateY(-5px); /* Ngritje e lehtë lart */
+    border-bottom: 3px solid #9C2D2F; /* Vijë e kuqe poshtë */
+}
+
+/* Stili i ikonave në kartat e përfitimeve */
+.benefit-card i {
+    font-size: 2.5rem; /* Madhësia e fontit */
+    color: #9C2D2F; /* Ngjyra e kuqe */
+    margin-bottom: 15px; /* Hapësira poshtë */
+}
+
+/* Stili i titujve në kartat e përfitimeve */
+.benefit-card h3 {
+    margin-bottom: 10px; /* Hapësira poshtë */
+    color: #333; /* Ngjyra e tekstit */
+}
+
+/* Stilet e validimit të formularit */
+input.error, 
+select.error, 
+textarea.error {
+    border-color: #9C2D2F; /* Kufi i kuq për të treguar gabim */
+    background-color: #fff0f0; /* Sfond i kuq i lehtë */
+}
+
+/* Stilet e ngarkimit të skedarëve */
+.file-upload-container {
+    position: relative; /* Pozicionim relativ */
+    display: flex; /* Përdorim layout flex */
+    align-items: center; /* Rreshtim vertikal në qendër */
+    margin-bottom: 5px; /* Hapësira poshtë */
+}
+
+/* Stili i inputit të skedarit (i fshehur) */
+.file-input {
+    position: absolute; /* Pozicionim absolut */
+    left: 0; /* Pozicionim nga e majta */
+    top: 0; /* Pozicionim nga lart */
+    opacity: 0; /* Transparencë totale (i padukshëm) */
+    width: 100%; /* Gjerësia e plotë */
+    height: 100%; /* Lartësia e plotë */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    z-index: 1; /* Shtresa mbi elementët e tjerë */
+}
+
+/* Stili i etiketës për ngarkimin e skedarit */
+.file-label {
+    display: inline-block; /* Shfaqet si bllok në linjë */
+    padding: 10px 15px; /* Hapësira e brendshme */
+    background-color: #9C2D2F; /* Ngjyra e kuqe */
+    color: white; /* Tekst i bardhë */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    cursor: pointer; /* Kursori shfaqet si dorë */
+    font-size: 0.9rem; /* Madhësia e fontit */
+    transition: all 0.3s ease; /* Animacion */
+}
+
+/* Efekti kur kursori kalon mbi etiketën */
+.file-label:hover {
+    background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* Stili i emrit të skedarit */
+.file-name {
+    margin-left: 10px; /* Hapësira majtas */
+    font-size: 0.9rem; /* Madhësia e fontit */
+    color: #555; /* Ngjyra e tekstit */
+    flex-grow: 1; /* Zë hapësirën e lirë */
+    white-space: nowrap; /* Pa thyerje të tekstit */
+    overflow: hidden; /* Fsheh tekstin që del jashtë */
+    text-overflow: ellipsis; /* Tregon "..." për tekstin e fshehur */
+}
+
+/* Stili i shënimit për skedarin */
+.file-hint {
+    display: block; /* Shfaqet si bllok */
+    font-size: 0.8rem; /* Madhësia e fontit */
+    color: #777; /* Ngjyra e tekstit */
+    margin-top: 5px; /* Hapësira sipër */
+}
+
+/* Stili i opsioneve checkbox me gabim */
+.checkbox-options.error {
+    border: 1px solid #9C2D2F; /* Kufi i kuq */
+    border-radius: 5px; /* Këndet e rrumbullakosura */
+    padding: 5px; /* Hapësira e brendshme */
+    background-color: #fff0f0; /* Sfond i kuq i lehtë */
+}
+
+/* Përshtatjet për pajisjet mobile */
+@media (max-width: 768px) {
+    /* Madhësia e titullit në header për pajisjet mobile */
+    .page-header h1 {
+        font-size: 2rem; /* Madhësi më e vogël e fontit */
+    }
+    
+    /* Ndryshimi i layout-it për kontejnerin e regjistrimit në pajisjet mobile */
+    .registration-container {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+    }
+    
+    /* Gjerësia e plotë për informacionin dhe formularin në pajisjet mobile */
+    .registration-info,
+    .registration-form {
+        width: 100%; /* Gjerësia e plotë */
+    }
+    
+    /* Hapësira më e vogël ndërmjet përfitimeve në pajisjet mobile */
+    .benefits-container {
+        gap: 15px; /* Hapësira më e vogël */
+    }
+    
+    /* Gjerësia e kartave të përfitimeve në pajisjet mobile */
+    .benefit-card {
+        width: 100%; /* Gjerësia e plotë */
+        max-width: 300px; /* Gjerësia maksimale */
+    }
+    
+    /* Ndryshimi i layout-it për kontejnerin e ngarkimit të skedarëve në pajisjet mobile */
+    .file-upload-container {
+        flex-direction: column; /* Elementët shfaqen vertikalisht */
+        align-items: flex-start; /* Rreshtim në fillim */
+    }
+    
+    /* Pozicionimi i emrit të skedarit në pajisjet mobile */
+    .file-name {
+        margin-left: 0; /* Pa hapësirë majtas */
+        margin-top: 5px; /* Hapësira sipër */
+    }
+}

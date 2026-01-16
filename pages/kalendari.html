@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Lidhja me skedarët CSS dhe Font Awesome për ikonat -->
+  <title>Kalendari - Kori Mrekullia</title>
+  <link rel="stylesheet" href="../css/index.css" />
+  <link rel="stylesheet" href="../css/kalendari.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navigimi i faqes me menu dhe nënmenu dropdown -->
+  <nav class="navbar">
+    <div class="logo">
+        <img src="../asete/foto/logo.png" alt="Logo">
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/pages/index.html">Faqja Kryesore</a></li>
+      <li><a href="/pages/rreth-nesh.html">Rreth Nesh</a></li>
+      <li class="dropdown">
+        <a>Aktivitete</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/koncerte.html">Koncertet</a></li>
+          <li><a href="/pages/kalendari.html" class="active">Kalendari</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a></li>
+      <li><a href="/pages/galeria.html">Galeria</a></li>
+      <li><a href="/pages/suport.html">Suport</a></li>
+      <li class="dropdown">
+        <a>Informacione</a>
+        <ul class="dropdown-content">
+          <li><a href="/pages/blog.html">Blog</a></li>
+          <li><a href="/pages/faq.html">FAQ</a></li>
+        </ul>
+      </li>
+      <li><a href="/pages/kontakt.html">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <!-- Përmbajtja kryesore e faqes -->
+  <main>
+    <h1 class="page-title">Kalendari i Aktiviteteve</h1>
+    <div class="calendar-section">
+      <!-- Sidebar me zgjedhjen e datës dhe filtrat e ngjarjeve -->
+      <div class="sidebar">
+        <div class="date-picker">
+          <h3>Zgjidhni dat&euml;n</h3>
+          <input type="date" id="dateInput" />
+          <button onclick="checkSelectedDate()" class="cal-button">K&euml;rko</button>
+        </div>
+        <div class="filters">
+          <h3>Filtro ngjarjet</h3>
+          <label><input type="checkbox" class="filterCheck" value="provë" checked onchange="applyFilters()"> Shfaq Provat</label>
+          <label><input type="checkbox" class="filterCheck" value="koncert" checked onchange="applyFilters()"> Shfaq Koncertet</label>
+          <label><input type="checkbox" class="filterCheck" value="prindër" checked onchange="applyFilters()"> Shfaq Evente p&euml;r Prind&euml;rit</label>
+        </div>
+        <div class="info-box" id="infoBox">
+          <h3>Detaje</h3>
+          <p>Kliko mbi nj&euml; dit&euml; n&euml; kalendar p&euml;r t&euml; par&euml; detajet e aktiviteteve p&euml;r at&euml; dat&euml;.</p>
+        </div>
+      </div>
+      <!-- Zona e kalendarit me kontrollet e navigimit dhe rrjetën e ditëve -->
+      <div class="calendar-area">
+        <div class="calendar-controls">
+          <button onclick="prevMonth()" class="cal-button"><i class="fas fa-chevron-left"></i></button>
+          <span id="monthLabel" class="month-label">Muaji</span>
+          <button onclick="nextMonth()" class="cal-button"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="weekdays">
+          <div>H&euml;n&euml;</div>
+          <div>Mart&euml;</div>
+          <div>M&euml;rkur&euml;</div>
+          <div>Enjte</div>
+          <div>Premte</div>
+          <div>Shtun&euml;</div>
+          <div>Diel&euml;</div>
+        </div>
+        <div id="calendar" class="calendar-grid"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer me te dhenat e kontaktit, lidhjet sociale dhe te drejtat e rezervuara -->
+  <footer>
+    <div class="footer-container">
+      <h2 class="footer-title">Kori Mrekullia</h2>
+      <div class="footer-links">
+        <a href="/pages/index.html">Faqja Kryesore</a>
+        <a href="/pages/koncerte.html">Koncertet</a>
+        <a href="/pages/kalendari.html">Kalendari</a>
+        <a href="/pages/behu-pjese.html">B&euml;hu Pjes&euml;</a>
+        <a href="/pages/kontakt.html">Na kontaktoni</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61568945231559"><i class="fab fa-facebook-f"></i> </a>
+        <a href="https://www.facebook.com/orkestra.tirana"><i class="fab fa-facebook-f"></i> </a>
+      </div>
+      <div class="footer-copy">
+        &copy; 2025 Kori Mrekullia. T&euml; gjitha t&euml; drejtat e rezervuara.
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Skriptat JavaScript për funksionalitetin e faqes dhe kalendarit -->
+  <script src="../js/index.js"></script>
+  <script src="../js/kalendari.js"></script>
+</body>
+</html>

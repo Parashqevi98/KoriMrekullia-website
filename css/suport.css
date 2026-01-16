@@ -1,0 +1,354 @@
+/* RESET STYLES - Resetimi i stileve bazë */
+* {
+  margin: 0; /* Heq hapësirën e jashtme */
+  padding: 0; /* Heq hapësirën e brendshme */
+  box-sizing: border-box; /* Përfshin padding dhe border në gjerësinë totale */
+}
+
+/* Stilizimi bazë i faqes */
+body {
+  font-family: 'Poppins', sans-serif; /* Fonti kryesor i faqes */
+  margin: 0; /* Heq hapësirën e jashtme */
+  padding: 0; /* Heq hapësirën e brendshme */
+  background: #fff; /* Sfond i bardhë */
+  color: #333; /* Ngjyrë gri e errët për tekstin */
+}
+
+/* HERO HEADER STYLES - Stilet e kokës së faqes, me tekst më të vogël */
+header.hero {
+  position: relative; /* Pozicionim relativ */
+  background-color: #9C2D2F; /* Ngjyrë e kuqe për sfondin */
+  color: white; /* Tekst i bardhë */
+  text-align: center; /* Qendërzimi i tekstit */
+  padding: 50px 20px; /* Hapësira e brendshme: 50px lart/poshtë, 20px majtas/djathtas */
+  margin-bottom: 0; /* Pa hapësirë poshtë */
+  height: auto; /* Lartësia automatike bazuar në përmbajtje */
+  overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+}
+
+/* Mbishkrimi i stileve të trashëguara duke përdorur !important */
+.hero-text {
+  font-size: 1.6rem !important; /* Madhësia e fontit me përparësi të lartë */
+  margin: 0 auto; /* Qendërzimi horizontal */
+  max-width: 800px; /* Gjerësia maksimale */
+  font-weight: 600 !important; /* Trashësia e fontit me përparësi të lartë */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Hije e lehtë për tekstin */
+  position: relative; /* Pozicionim relativ */
+  z-index: 2; /* Shtresa mbi elementët e tjerë */
+  text-transform: none !important; /* Pa transformim teksti (shkronja të mëdha) */
+}
+
+/* SECTION STYLES - Stilet për seksionet e faqes */
+.section {
+  padding: 3rem 2rem; /* Hapësira e brendshme: 3rem lart/poshtë, 2rem majtas/djathtas */
+  text-align: center; /* Qendërzimi i tekstit */
+  max-width: 1200px; /* Gjerësia maksimale */
+  margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i titujve të seksioneve */
+.section h2 {
+  color: #9C2D2F; /* Ngjyrë e kuqe */
+  margin-bottom: 1.5rem; /* Hapësira poshtë */
+  font-size: 2rem; /* Madhësia e fontit */
+  position: relative; /* Pozicionim relativ për vijën nën titull */
+  display: inline-block; /* Shfaqet si bllok në linjë */
+}
+
+/* Vija dekorative nën titujt e seksioneve */
+.section h2:after {
+  content: ''; /* Përmbajtje e zbrazët */
+  position: absolute; /* Pozicionim absolut */
+  width: 60%; /* Gjerësia 60% e titullit */
+  height: 3px; /* Trashësia e vijës */
+  background-color: #9C2D2F; /* Ngjyrë e kuqe */
+  bottom: -10px; /* Pozicionim 10px poshtë titullit */
+  left: 20%; /* Pozicionim 20% nga e majta */
+}
+
+/* SUPPORT OPTIONS - Opsionet e mbështetjes */
+.options {
+  display: flex; /* Përdorim layout flex */
+  flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+  justify-content: center; /* Qendërzim horizontal */
+  gap: 2rem; /* Hapësira ndërmjet kartave */
+  margin-top: 2.5rem; /* Hapësira sipër */
+}
+
+/* Stili i kartave të opsioneve */
+.card {
+  background: #f8f8f8; /* Ngjyrë gri shumë e lehtë */
+  border-radius: 12px; /* Këndet e rrumbullakosura */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Hije e lehtë */
+  padding: 1.8rem 1.5rem 4rem 1.5rem; /* Hapësira e brendshme me më shumë hapësirë poshtë për butonin */
+  width: 280px; /* Gjerësia fikse */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animacion për transformimin dhe hijen */
+  position: relative; /* Pozicionim relativ për butonin */
+  display: flex; /* Përdorim layout flex */
+  flex-direction: column; /* Elementët shfaqen vertikalisht */
+  text-align: center; /* Qendërzimi i tekstit */
+  border-top: 4px solid #9C2D2F; /* Vijë e kuqe në krye */
+}
+
+/* Efekti kur kursori kalon mbi kartë */
+.card:hover {
+  transform: translateY(-5px); /* Ngritje e lehtë lart */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* Hije më e theksuar */
+}
+
+/* Stili i titullit në kartë */
+.card h3 {
+  margin-top: 0; /* Pa hapësirë sipër */
+  color: #9C2D2F; /* Ngjyrë e kuqe */
+}
+
+/* Stili i paragrafit në kartë */
+.card p {
+  flex-grow: 1; /* Zë hapësirën e disponueshme */
+  margin-bottom: 1.5rem; /* Hapësira poshtë */
+}
+
+/* Stili i titullit dhe paragrafit në kartë */
+.card h3, .card p {
+  margin-bottom: 10px; /* Hapësira poshtë */
+}
+
+/* DONATE BUTTON - Butoni i donacionit */
+.donate-btn {
+  position: absolute; /* Pozicionim absolut */
+  bottom: 20px; /* Pozicionim nga poshtë */
+  left: 50%; /* Pozicionim në mes horizontalisht */
+  transform: translateX(-50%); /* Qendërzim i plotë horizontal */
+  padding: 0.7rem 1.5rem; /* Hapësira e brendshme */
+  background-color: #9C2D2F; /* Ngjyrë e kuqe për sfondin */
+  color: #fff; /* Tekst i bardhë */
+  border: none; /* Pa kufi */
+  border-radius: 30px; /* Këndet shumë të rrumbullakosura */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+  font-weight: 500; /* Trashësia e fontit */
+  transition: all 0.3s ease; /* Animacion për të gjitha vetitë */
+  box-shadow: 0 3px 6px rgba(156, 45, 47, 0.3); /* Hije e lehtë me ngjyrë */
+  opacity: 0; /* Fillimisht i padukshëm */
+  visibility: hidden; /* Fillimisht i fshehur */
+}
+
+/* Shfaqja e butonit kur kursori kalon mbi kartë */
+.card:hover .donate-btn {
+  opacity: 1; /* Plotësisht i dukshëm */
+  visibility: visible; /* I dukshëm */
+}
+
+/* Efekti kur kursori kalon mbi butonin e donacionit */
+.donate-btn:hover {
+  background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+  transform: translateX(-50%) scale(1.05); /* Qendërzim horizontal dhe zmadhim i lehtë */
+}
+
+/* WHY SUPPORT SECTION - Seksioni "Pse të mbështesni" */
+.why-support {
+  background: #f9f0f0; /* Ngjyrë rozë shumë e lehtë */
+  padding: 3rem; /* Hapësira e brendshme */
+  text-align: center; /* Qendërzimi i tekstit */
+  border-top: 1px solid rgba(156, 45, 47, 0.2); /* Vijë e hollë sipër */
+  border-bottom: 1px solid rgba(156, 45, 47, 0.2); /* Vijë e hollë poshtë */
+}
+
+/* Stili i titullit në seksionin "Pse të mbështesni" */
+.why-support h3 {
+  color: #9C2D2F; /* Ngjyrë e kuqe */
+  font-size: 1.5rem; /* Madhësia e fontit */
+  margin-bottom: 1rem; /* Hapësira poshtë */
+}
+
+/* Stili i paragrafit në seksionin "Pse të mbështesni" */
+.why-support p {
+  max-width: 800px; /* Gjerësia maksimale */
+  margin: 0 auto; /* Qendërzimi horizontal */
+  line-height: 1.6; /* Lartësia e rreshtit */
+}
+
+/* SPONSORS SECTION - Seksioni i sponsorëve */
+.sponsors {
+  display: flex; /* Përdorim layout flex */
+  justify-content: center; /* Qendërzim horizontal */
+  align-items: center; /* Qendërzim vertikal */
+  flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+  gap: 2rem; /* Hapësira ndërmjet logove */
+  padding: 3rem 2rem; /* Hapësira e brendshme */
+  background-color: #fff; /* Sfond i bardhë */
+  max-width: 1200px; /* Gjerësia maksimale */
+  margin: 0 auto; /* Qendërzimi horizontal */
+}
+
+/* Stili i logove të sponsorëve */
+.sponsors img {
+  height: 60px; /* Lartësia fikse */
+  opacity: 0.8; /* Transparencë e lehtë */
+  transition: opacity 0.3s; /* Animacion i ndryshimit të transparencës */
+  filter: grayscale(100%); /* Filtër bardhë e zi */
+}
+
+/* Efekti kur kursori kalon mbi logot */
+.sponsors img:hover {
+  opacity: 1; /* Plotësisht i dukshëm */
+  filter: none; /* Pa filtër, shfaqet me ngjyra */
+}
+
+/* FORM POPUPS - Dritaret popup të formularëve */
+.popup-form, .success-popup {
+  position: fixed; /* Pozicionim fiks në ekran */
+  top: 50%; /* Pozicionim nga lart */
+  left: 50%; /* Pozicionim nga e majta */
+  transform: translate(-50%, -50%); /* Qendërzim i plotë */
+  background: #fff; /* Sfond i bardhë */
+  padding: 2.5rem; /* Hapësira e brendshme */
+  border-radius: 10px; /* Këndet e rrumbullakosura */
+  box-shadow: 0 0 30px rgba(0,0,0,0.3); /* Hije e theksuar */
+  z-index: 1001; /* Shtresa mbi elementët e tjerë */
+  display: none; /* Fillimisht e fshehur */
+  width: 90%; /* Gjerësia 90% */
+  max-width: 450px; /* Gjerësia maksimale */
+  border-top: 5px solid #9C2D2F; /* Vijë e trashë e kuqe në krye */
+}
+
+/* Stili i titullit në dritaren popup të formularit */
+.popup-form h2 {
+  margin-top: 0; /* Pa hapësirë sipër */
+  color: #9C2D2F; /* Ngjyrë e kuqe */
+  text-align: center; /* Qendërzimi i tekstit */
+  margin-bottom: 1.5rem; /* Hapësira poshtë */
+}
+
+/* Stili i fushave të formularit */
+.popup-form form input,
+.popup-form form select,
+.popup-form form textarea {
+  width: 100%; /* Gjerësia e plotë */
+  margin-bottom: 1.2rem; /* Hapësira poshtë */
+  padding: 0.8rem; /* Hapësira e brendshme */
+  border: 1px solid #ddd; /* Kufi i hollë gri */
+  border-radius: 5px; /* Këndet e rrumbullakosura */
+  transition: border 0.3s; /* Animacion i ndryshimit të kufirit */
+  box-sizing: border-box; /* Përfshin padding dhe border në gjerësinë totale */
+  font-family: 'Poppins', sans-serif; /* Fonti i njëjtë me faqen */
+}
+
+/* Stili i fushave kur janë në fokus */
+.popup-form form input:focus,
+.popup-form form select:focus,
+.popup-form form textarea:focus {
+  border-color: #9C2D2F; /* Kufi i kuq */
+  outline: none; /* Heq konturin e parazgjedhur */
+}
+
+/* Stili i butonit në formular */
+.popup-form button {
+  background-color: #9C2D2F; /* Ngjyrë e kuqe për sfondin */
+  color: #fff; /* Tekst i bardhë */
+  padding: 0.8rem 2rem; /* Hapësira e brendshme */
+  border: none; /* Pa kufi */
+  border-radius: 30px; /* Këndet shumë të rrumbullakosura */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+  font-weight: 500; /* Trashësia e fontit */
+  display: block; /* Shfaqet si bllok */
+  margin: 1rem auto 0; /* Qendërzimi horizontal me hapësirë sipër */
+  transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin e formularit */
+.popup-form button:hover {
+  background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* OVERLAY - Shtresa e errët që mbulon faqen kur shfaqet një popup */
+.overlay {
+  position: fixed; /* Pozicionim fiks në ekran */
+  top: 0; left: 0; right: 0; bottom: 0; /* Mbush gjithë ekranin */
+  background: rgba(0,0,0,0.6); /* Sfond i zi gjysmë-transparent */
+  z-index: 1000; /* Shtresa mbi elementët e tjerë, por nën popup */
+  display: none; /* Fillimisht e fshehur */
+  backdrop-filter: blur(3px); /* Efekt blur për elementët poshtë */
+}
+
+/* SUCCESS POPUP - Dritarja popup e suksesit pas dërgimit të formës */
+.success-popup {
+  text-align: center; /* Qendërzimi i tekstit */
+}
+
+/* Stili i paragrafit në dritaren e suksesit */
+.success-popup p {
+  margin-bottom: 1.5rem; /* Hapësira poshtë */
+  font-size: 1.1rem; /* Madhësia e fontit */
+}
+
+/* Stili i butonit në dritaren e suksesit */
+.success-popup button {
+  background-color: #9C2D2F; /* Ngjyrë e kuqe për sfondin */
+  color: #fff; /* Tekst i bardhë */
+  padding: 0.8rem 2rem; /* Hapësira e brendshme */
+  border: none; /* Pa kufi */
+  border-radius: 30px; /* Këndet shumë të rrumbullakosura */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+  font-weight: 500; /* Trashësia e fontit */
+  transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin e dritares së suksesit */
+.success-popup button:hover {
+  background-color: #7A2522; /* Ngjyrë e kuqe më e errët */
+}
+
+/* RESPONSIVE STYLES - Përshtatjet për ekranet e ndryshme */
+/* Për ekranet me gjerësi deri në 768px (tableta) */
+@media (max-width: 768px) {
+  /* Zvogëlimi i madhësisë së tekstit në hero */
+  .hero-text {
+    font-size: 1.4rem !important; /* Madhësia e fontit zvogëluar */
+  }
+  
+  /* Zvogëlimi i hapësirës në seksione */
+  .section {
+    padding: 2rem 1rem; /* Hapësira e brendshme zvogëluar */
+  }
+  
+  /* Ndryshimi i drejtimit të opsioneve në kolona */
+  .options {
+    flex-direction: column; /* Elementët shfaqen vertikalisht */
+    align-items: center; /* Qendërzim horizontal */
+    gap: 1.5rem; /* Hapësira ndërmjet kartave zvogëluar */
+  }
+  
+  /* Përshtatja e gjerësisë së kartave për ekrane të vogla */
+  .card {
+    width: 100%; /* Gjerësia e plotë */
+    max-width: 350px; /* Gjerësia maksimale */
+  }
+  
+  /* Zvogëlimi i hapësirës në seksionin "Pse të mbështesni" */
+  .why-support {
+    padding: 2rem 1rem; /* Hapësira e brendshme zvogëluar */
+  }
+  
+  /* Zvogëlimi i hapësirës në dritaret popup */
+  .popup-form, .success-popup {
+    padding: 1.5rem; /* Hapësira e brendshme zvogëluar */
+  }
+}
+
+/* Për ekranet me gjerësi deri në 480px (telefona) */
+@media (max-width: 480px) {
+  /* Zvogëlimi i mëtejshëm i madhësisë së tekstit në hero */
+  .hero-text {
+    font-size: 1.2rem !important; /* Madhësia e fontit zvogëluar edhe më shumë */
+  }
+  
+  /* Zvogëlimi i madhësisë së titujve të seksioneve */
+  .section h2 {
+    font-size: 1.5rem; /* Madhësia e fontit zvogëluar */
+  }
+  
+  /* Zvogëlimi i lartësisë së logove të sponsorëve */
+  .sponsors img {
+    height: 40px; /* Lartësia zvogëluar */
+  }
+}

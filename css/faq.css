@@ -1,0 +1,264 @@
+/* Përcaktimi i variablave globale të ngjyrave */
+:root {
+  --primary-color: #9C2D2F;      /* Ngjyra kryesore - e kuqe */
+  --accent-color: #ffcad4;       /* Ngjyrë dytësore - rozë e lehtë */
+  --bg-color: #ffffff;           /* Ngjyra e sfondit - e bardhë */
+  --text-color: #333;            /* Ngjyra e tekstit - gri e errët */
+  --faq-bg: #ffebee;             /* Ngjyrë shumë e lehtë e kuqe për sfondin e FAQ */
+}
+
+/* Resetimi i modelit të kutisë për të gjithë elementët */
+* {
+  box-sizing: border-box; /* Përfshin padding dhe border në gjerësinë dhe lartësinë e elementëve */
+}
+
+/* Stilizimi bazë i faqes */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fontet e përdorura */
+  margin: 0; /* Heq hapësirën e jashtme */
+  background-color: var(--bg-color); /* Ngjyra e sfondit nga variablat */
+  color: var(--text-color); /* Ngjyra e tekstit nga variablat */
+}
+
+/* Stilizimi i kokës së faqes */
+header {
+  background: linear-gradient(to right, #9C2D2F, #b14648); /* Gradient i kuq i errët nga e majta në të djathtë */
+  padding: 1.5rem; /* Hapësira e brendshme */
+  text-align: center; /* Qendërzimi i tekstit */
+  color: white; /* Ngjyra e tekstit e bardhë */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Hije e lehtë poshtë */
+}
+
+/* Stili i titullit në header */
+header h1 {
+  margin: 0; /* Heq hapësirën e jashtme */
+  font-size: 2rem; /* Madhësia e fontit */
+}
+
+/* Zona kryesore e përmbajtjes */
+main {
+  padding: 2rem; /* Hapësira e brendshme */
+  max-width: 1000px; /* Gjerësia maksimale */
+  margin: auto; /* Qendërzimi horizontal */
+}
+
+/* Seksioni i hyrjes në faqe */
+.intro-section {
+  display: flex; /* Përdorim layout flex */
+  align-items: center; /* Qendërzimi vertikal i elementëve */
+  margin-bottom: 2rem; /* Hapësira poshtë */
+  padding: 1.5rem; /* Hapësira e brendshme */
+  background-color: rgb(252, 248, 248); /* Ngjyrë e lehtë rozë për sfond */
+  border-radius: 12px; /* Këndet e rrumbullakosura */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Hije e lehtë */
+}
+
+/* Stili i ikonës në seksionin e hyrjes */
+.intro-icon {
+  font-size: 3rem; /* Madhësia e fontit */
+  color: var(--primary-color); /* Ngjyra e kuqe */
+  margin-right: 1.5rem; /* Hapësira djathtas */
+}
+
+/* Stili i imazhit në seksionin e hyrjes */
+.intro-image {
+  width: 250px; /* Gjerësia fikse */
+  height: 150px; /* Lartësia fikse */
+  object-fit: cover; /* Mbush hapësirën duke ruajtur proporcionin */
+}
+
+/* Stili i tekstit në seksionin e hyrjes */
+.intro-text {
+  flex: 1; /* Zë hapësirën e disponueshme */
+}
+
+/* Stili i titullit në tekstin e hyrjes */
+.intro-text h2 {
+  margin-top: 0; /* Heq hapësirën sipër */
+  color: var(--primary-color); /* Ngjyra e kuqe */
+}
+
+/* Stili i kutisë së kërkimit */
+.search-box {
+  margin-bottom: 2rem; /* Hapësira poshtë */
+  text-align: center; /* Qendërzimi horizontal */
+}
+
+/* Stili i inputit të kërkimit */
+.search-box input {
+  padding: 0.7rem 1rem; /* Hapësira e brendshme */
+  width: 90%; /* Gjerësia 90% */
+  max-width: 500px; /* Gjerësia maksimale */
+  border: 2px solid var(--accent-color); /* Kufi rozë */
+  border-radius: 8px; /* Këndet e rrumbullakosura */
+  font-size: 1rem; /* Madhësia e fontit */
+}
+
+/* Kontejneri i pyetjeve të shpeshta */
+.faq-container {
+  display: flex; /* Përdorim layout flex */
+  flex-wrap: wrap; /* Lejojmë thyerjen e elementëve në rreshta të rinj */
+  gap: 2rem; /* Hapësira ndërmjet elementëve */
+}
+
+/* Seksioni i pyetjeve të shpeshta */
+.faq-section {
+  flex: 2; /* Zë hapësirë më të madhe krahasuar me faq-actions */
+}
+
+/* Stili i çdo elementi FAQ */
+.faq {
+  margin-bottom: 1rem; /* Hapësira poshtë */
+  border-radius: 12px; /* Këndet e rrumbullakosura */
+  background-color: var(--faq-bg); /* Ngjyrë e lehtë e kuqe për sfond */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* Hije e lehtë */
+  overflow: hidden; /* Fsheh përmbajtjen që del jashtë kufijve */
+  transition: all 0.3s ease-in-out; /* Animacion për të gjitha ndryshimet */
+}
+
+/* Stili i pyetjes në elementin FAQ */
+.faq-question {
+  padding: 1rem 1.5rem; /* Hapësira e brendshme */
+  display: flex; /* Përdorim layout flex */
+  justify-content: space-between; /* Elementët shpërndahen në hapësirën e disponueshme */
+  align-items: center; /* Qendërzimi vertikal */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+  background-color: var(--accent-color); /* Ngjyra rozë e lehtë */
+  font-weight: bold; /* Teksti me trashësi */
+  transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi pyetjen */
+.faq-question:hover {
+  background-color: #fff0f3; /* Ngjyrë më e lehtë rozë */
+}
+
+/* Stili i përgjigjes në elementin FAQ */
+.faq-answer {
+  padding: 1rem 1.5rem; /* Hapësira e brendshme */
+  display: none; /* Fillimisht e fshehur */
+  animation: fadeIn 0.4s ease-in-out; /* Animacion i shfaqjes */
+  background-color: white; /* Sfond i bardhë */
+}
+
+/* Shfaqja e përgjigjes kur FAQ është aktiv */
+.faq.active .faq-answer {
+  display: block; /* Shfaqet si bllok */
+}
+
+/* Stili i ikonës në elementin FAQ */
+.faq-icon {
+  font-size: 1.2rem; /* Madhësia e fontit */
+  transition: transform 0.3s; /* Animacion i rrotullimit */
+}
+
+/* Rrotullimi i ikonës kur FAQ është aktiv */
+.faq.active .faq-icon {
+  transform: rotate(180deg); /* Rrotullohet 180 gradë */
+}
+
+/* Zona e veprimeve (butonave) */
+.faq-actions {
+  flex: 1; /* Zë hapësirë më të vogël krahasuar me faq-section */
+  display: flex; /* Përdorim layout flex */
+  flex-direction: column; /* Elementët shfaqen vertikalisht */
+  gap: 1rem; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i butonave në zonën e veprimeve */
+.faq-actions button {
+  padding: 0.7rem 1rem; /* Hapësira e brendshme */
+  font-size: 1rem; /* Madhësia e fontit */
+  border: none; /* Pa kufi */
+  background-color: var(--primary-color); /* Ngjyra e kuqe */
+  color: white; /* Teksti i bardhë */
+  border-radius: 8px; /* Këndet e rrumbullakosura */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+  transition: background-color 0.3s; /* Animacion i ndryshimit të ngjyrës */
+}
+
+/* Efekti kur kursori kalon mbi butonin */
+.faq-actions button:hover {
+  background-color: #9C2D2F; /* Ngjyrë e kuqe më e thellë */
+}
+
+/* Stili i formularit për pyetje të reja */
+.faq-form {
+  display: none; /* Fillimisht i fshehur */
+  flex-direction: column; /* Elementët shfaqen vertikalisht */
+  gap: 0.5rem; /* Hapësira ndërmjet elementëve */
+}
+
+/* Stili i zonës së tekstit në formular */
+.faq-form textarea {
+  width: 100%; /* Gjerësia e plotë */
+  height: 100px; /* Lartësia fikse */
+  padding: 0.7rem; /* Hapësira e brendshme */
+  border-radius: 8px; /* Këndet e rrumbullakosura */
+  border: 1px solid #ccc; /* Kufi i hollë gri */
+}
+
+/* Stili i dritares popup */
+.popup, .popup-success {
+  display: none; /* Fillimisht e fshehur */
+  position: fixed; /* Pozicionim fiks në ekran */
+  top: 50%; /* Pozicionim nga lart */
+  left: 50%; /* Pozicionim nga e majta */
+  transform: translate(-50%, -50%); /* Qendërzim absolut */
+  background-color: white; /* Sfond i bardhë */
+  border: 2px solid var(--primary-color); /* Kufi i kuq */
+  padding: 1rem; /* Hapësira e brendshme */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Hije më e theksuar */
+  z-index: 1000; /* Vendosur mbi gjithçka tjetër */
+  border-radius: 12px; /* Këndet e rrumbullakosura */
+  max-width: 400px; /* Gjerësia maksimale */
+  text-align: center; /* Tekst i qendërzuar */
+}
+
+/* Stili i titullit në dritaret popup */
+.popup h3, .popup-success h3 {
+  margin-top: 0; /* Heq hapësirën sipër */
+}
+
+/* Stili i butonit të mbylljes së popup */
+.popup-close {
+  margin-top: 1rem; /* Hapësira sipër */
+  padding: 0.5rem 1rem; /* Hapësira e brendshme */
+  background-color: var(--primary-color); /* Ngjyra e kuqe */
+  color: white; /* Teksti i bardhë */
+  border: none; /* Pa kufi */
+  border-radius: 6px; /* Këndet e rrumbullakosura */
+  cursor: pointer; /* Kursori shfaqet si dorë */
+}
+
+/* Përcaktimi i animacionit për shfaqjen graduale */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-5px);} /* Fillon transparent dhe 5px sipër */
+  to {opacity: 1; transform: translateY(0);} /* Përfundon plotësisht i dukshëm në pozicionin e duhur */
+}
+
+/* Përshtatjet për pajisjet mobile */
+@media (max-width: 768px) {
+  /* Ndryshimi i layout-it të kontejnerit FAQ për ekrane të vogla */
+  .faq-container {
+      flex-direction: column; /* Elementët shfaqen vertikalisht */
+  }
+  
+  /* Ndryshimi i layout-it të seksionit të hyrjes për ekrane të vogla */
+  .intro-section {
+      flex-direction: column; /* Elementët shfaqen vertikalisht */
+      text-align: center; /* Tekst i qendërzuar */
+  }
+  
+  /* Rregullimi i margjinave të ikonës për ekrane të vogla */
+  .intro-icon {
+      margin-right: 0; /* Heq hapësirën djathtas */
+      margin-bottom: 1rem; /* Shton hapësirë poshtë */
+  }
+  
+  /* Ruajtja e përmasave të imazhit në ekrane të vogla */
+  .intro-image {
+      width: 250px; /* Gjerësia fikse */
+      height: 150px; /* Lartësia fikse */
+  }
+}
